@@ -1,6 +1,8 @@
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Header from "./Header";
+import Section from "./Section";
+import ButtonsArea from "./ButtonsArea";
 
 let tasks = [
   {
@@ -21,23 +23,14 @@ function App() {
   return (
     <div className="container">
       <Header title="Lista zadań" />
-      <section className="section">
-        <header className="section__header">
-          <h2>Dodaj nowe zadanie</h2>
-        </header>
-        <div className="section__body">
-          <Form />
-        </div>
-      </section>
-      <section className="section">
-        <header className="section__header section__header--withButtons">
-          <h2>Lista zadań</h2>
-          <div className="buttonsArea"></div>
-        </header>
-        <div className="section__body section__body--withList">
-          <Tasks tasks={tasks} hideDone={hideDone} />
-        </div>
-      </section>
+      <Section title="Dodaj nowe zadanie" body={<Form />} />
+      <Section 
+      title="Lista zadań" 
+      body={<Tasks tasks={tasks} hideDone={hideDone} />}
+      extraHeaderContent={<ButtonsArea tasks={tasks} hideDone={hideDone} />}
+      extraHeaderClass="section__header--withButtons"
+      extraBodyClass="section__body--withList"
+      />
     </div>
   );
 }

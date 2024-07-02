@@ -1,0 +1,30 @@
+.section{
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.section__header{   
+    border-bottom: 2px solid #ddd;
+    padding: 5px;
+    padding-left: 25px;
+}
+
+.section__header--withButtons{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items:center;
+}
+
+@media(max-width:992px) {
+    .section__header--withButtons{
+        grid-template-columns: 1fr;
+    }
+}
+
+.section__body{
+    padding: 25px;
+}
+
+.section__body--withList{
+    padding-left: 0;
+}
