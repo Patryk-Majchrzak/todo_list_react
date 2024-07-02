@@ -1,3 +1,5 @@
+import Form from "./Form";
+
 function App() {
   return (
     <div className="container">
@@ -7,10 +9,7 @@ function App() {
           <h2>Dodaj nowe zadanie</h2>
         </header>
         <div className="section__body">
-          <form className="form">
-            <input className="form__input" placeholder="Co jest do zrobienia?" />
-            <button className="form__button">Dodaj zadanie</button>
-          </form>
+          <Form />
         </div>
       </section>
       <section className="section">
