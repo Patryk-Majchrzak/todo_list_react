@@ -8,40 +8,46 @@ import ButtonsArea from "./ButtonsArea";
 import Container from "./Container";
 
 let tasks = [
-  {
-    id: 1,
-    content: "zrobić coś",
-    done: false
-  },
-  {
-    id: 2,
-    content: "zrobić coś innego",
-    done: true
-  }
+    {
+        id: 1,
+        content: "zrobić coś",
+        done: false
+    },
+    {
+        id: 2,
+        content: "zrobić coś innego",
+        done: true
+    }
 ];
 
 let hideDone = false;
 
 function App() {
-  return (
-    <Container>
-      <Header title="Lista zadań" />
-      <Section 
-      sectionHeader={<SectionHeader title="Dodaj nowe zadanie" />} 
-      sectionBody={<SectionBody body={<Form />}/>} />
-      <Section
-        sectionHeader={<SectionHeader 
-          title="Lista zadań" 
-          additionalClass="section__header--withButtons" 
-          additionalContent={<ButtonsArea tasks={tasks} hideDone={hideDone} />} 
-          />}
-        sectionBody={<SectionBody 
-          content={<Tasks tasks={tasks} hideDone={hideDone} 
-          additionalClass="section__body--withList"/>} 
-          />}
-      />
-    </Container>
-  );
+    return (
+        <Container>
+            <Header title="Lista zadań" />
+            <Section
+                sectionHeader={<SectionHeader title="Dodaj nowe zadanie" />}
+                sectionBody={<SectionBody body={<Form />} />} />
+            <Section
+                sectionHeader={<SectionHeader
+                    title="Lista zadań"
+                    additionalClass="section__header--withButtons"
+                    additionalContent={<ButtonsArea
+                        tasks={tasks}
+                        hideDone={hideDone}
+                    />}
+                />}
+                sectionBody={<SectionBody
+                    additionalClass="section__body--withList"
+                    content={<Tasks
+                        tasks={tasks}
+                        hideDone={hideDone} 
+                        />}
+                />}
+            />
+        </Container>
+    );
 }
 
 export default App;
