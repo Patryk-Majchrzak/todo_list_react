@@ -1,4 +1,20 @@
 import Form from "./Form";
+import Tasks from "./Tasks";
+
+let tasks = [
+  {
+    id: 1,
+    content: "zrobić coś",
+    done: false
+  },
+  {
+    id: 2,
+    content: "zrobić coś innego",
+    done: true
+  }
+];
+
+let hideDone = false;
 
 function App() {
   return (
@@ -18,7 +34,7 @@ function App() {
           <div className="buttonsArea"></div>
         </header>
         <div className="section__body section__body--withList">
-          <ul></ul>
+          <Tasks tasks={tasks} hideDone={hideDone} />
         </div>
       </section>
     </div>
