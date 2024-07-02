@@ -1,7 +1,9 @@
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Header from "./Header";
-import Section from "./Section";
+import Section from "./Section"
+import SectionHeader from "./SectionHeader";
+import SectionBody from "./SectionBody";
 import ButtonsArea from "./ButtonsArea";
 import Container from "./Container";
 
@@ -24,13 +26,19 @@ function App() {
   return (
     <Container>
       <Header title="Lista zadań" />
-      <Section title="Dodaj nowe zadanie" body={<Form />} />
+      <Section 
+      sectionHeader={<SectionHeader title="Dodaj nowe zadanie" />} 
+      sectionBody={<SectionBody body={<Form />}/>} />
       <Section
-        title="Lista zadań"
-        body={<Tasks tasks={tasks} hideDone={hideDone} />}
-        extraHeaderContent={<ButtonsArea tasks={tasks} hideDone={hideDone} />}
-        extraHeaderClass="section__header--withButtons"
-        extraBodyClass="section__body--withList"
+        sectionHeader={<SectionHeader 
+          title="Lista zadań" 
+          additionalClass="section__header--withButtons" 
+          additionalContent={<ButtonsArea tasks={tasks} hideDone={hideDone} />} 
+          />}
+        sectionBody={<SectionBody 
+          content={<Tasks tasks={tasks} hideDone={hideDone} 
+          additionalClass="section__body--withList"/>} 
+          />}
       />
     </Container>
   );
