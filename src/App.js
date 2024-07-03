@@ -50,26 +50,45 @@ function App() {
         }));
     };
 
+    const addNewTask = (newTaskContent) => {
+        setTasks(tasks => [
+            ...tasks,
+            {
+                id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
+                content: newTaskContent,
+                done: false,
+            }
+        ]);
+    };
+
     return (
         <Container>
             <Header title="Lista zadań" />
             <Section
                 sectionHeader={<SectionHeader title="Dodaj nowe zadanie" />}
-                sectionBody={<SectionBody content={<Form />} />} />
+                sectionBody=
+                {<SectionBody content=
+                    {<Form addNewTask={addNewTask} />}
+                />}
+            />
             <Section
-                sectionHeader={<SectionHeader
+                sectionHeader=
+                {<SectionHeader
                     title="Lista zadań"
                     additionalClass="section__header--withButtons"
-                    additionalContent={<ButtonsArea
+                    additionalContent=
+                    {<ButtonsArea
                         tasks={tasks}
                         hideDone={hideDone}
                         hideDoneTasks={hideDoneTasks}
                         setAllDone={setAllDone}
                     />}
                 />}
-                sectionBody={<SectionBody
+                sectionBody=
+                {<SectionBody
                     additionalClass="section__body--withList"
-                    content={<Tasks
+                    content=
+                    {<Tasks
                         tasks={tasks}
                         hideDone={hideDone}
                         toggleTaskDone={toggleTaskDone}
