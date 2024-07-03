@@ -14,6 +14,9 @@ Hi! Welcome to my todo list, where you can create your list of tasks that can he
 
 1. Website is available only in polish (I am about to add language selection in thee future, so it will be available in english as well)
 2. Website has no interaction for now (nothing will happen when you try to click anything)
+3. Website should look like this
+
+<img src="for_readme/startingTasks.png">
 
 ## Available Scripts
 
