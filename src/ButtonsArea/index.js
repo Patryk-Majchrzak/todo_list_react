@@ -1,8 +1,11 @@
 import "./style.css"
 
 const ButtonsArea = ({tasks, hideDone}) => {
-    if (!!tasks.length) {
-        return (
+    if (!tasks.length) {
+        return null;
+    } 
+        
+    return (
         <div className="buttonsArea">
             <button className="buttonsArea__button">
                 {hideDone ? "Pokaż" : "Ukryj"} ukończone
@@ -11,8 +14,7 @@ const ButtonsArea = ({tasks, hideDone}) => {
                 Ukończ wszystkie
             </button>
         </div>
-        );
-    };
+    );
 };
 
 export default ButtonsArea;
