@@ -40,6 +40,10 @@ function App() {
         setTasks(tasks => tasks.filter(task => task.id !== id));
     };
 
+    const hideDoneTasks = () => {
+        setHideDone(hideDone => !hideDone)
+    }
+
     return (
         <Container>
             <Header title="Lista zadań" />
@@ -53,6 +57,7 @@ function App() {
                     additionalContent={<ButtonsArea
                         tasks={tasks}
                         hideDone={hideDone}
+                        hideDoneTasks={hideDoneTasks}
                     />}
                 />}
                 sectionBody={<SectionBody
