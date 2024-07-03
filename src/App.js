@@ -28,7 +28,7 @@ function App() {
             <Header title="Lista zadań" />
             <Section
                 sectionHeader={<SectionHeader title="Dodaj nowe zadanie" />}
-                sectionBody={<SectionBody body={<Form />} />} />
+                sectionBody={<SectionBody content={<Form />} />} />
             <Section
                 sectionHeader={<SectionHeader
                     title="Lista zadań"
