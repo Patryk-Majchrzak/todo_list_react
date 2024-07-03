@@ -1,0 +1,7 @@
+.section__body{
+    padding: 25px;
+}
+
+.section__body--withList{
+    padding-left: 0;
+}
