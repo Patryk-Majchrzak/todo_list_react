@@ -41,8 +41,14 @@ function App() {
     };
 
     const hideDoneTasks = () => {
-        setHideDone(hideDone => !hideDone)
-    }
+        setHideDone(hideDone => !hideDone);
+    };
+
+    const setAllDone = () => {
+        setTasks(tasks.map((task) => {
+            return { ...task, done: true }
+        }));
+    };
 
     return (
         <Container>
@@ -58,6 +64,7 @@ function App() {
                         tasks={tasks}
                         hideDone={hideDone}
                         hideDoneTasks={hideDoneTasks}
+                        setAllDone={setAllDone}
                     />}
                 />}
                 sectionBody={<SectionBody
