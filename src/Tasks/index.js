@@ -10,7 +10,7 @@ const Tasks = ({tasks, hideDone}) => (
                     </span>
                 <button className="list__button list__button--remove" />
             </li>
-        ))};
+        ))}
     </ul>
 );
 
