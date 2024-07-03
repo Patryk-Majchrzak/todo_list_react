@@ -6,23 +6,36 @@ import SectionHeader from "./SectionHeader";
 import SectionBody from "./SectionBody";
 import ButtonsArea from "./ButtonsArea";
 import Container from "./Container";
-
-let tasks = [
-    {
-        id: 1,
-        content: "zrobić coś",
-        done: false
-    },
-    {
-        id: 2,
-        content: "zrobić coś innego",
-        done: true
-    }
-];
-
-let hideDone = false;
+import { useState } from "react";
 
 function App() {
+
+    const [tasks, setTasks] = useState(
+        [
+            {
+                id: 1,
+                content: "zrobić coś",
+                done: false
+            },
+            {
+                id: 2,
+                content: "zrobić coś innego",
+                done: true
+            }
+        ]
+    );
+
+    const [hideDone, setHideDone] = useState(false)
+
+    const toggleTaskDone = (id) => {
+        setTasks(tasks.map((task) => {
+            if (task.id === id) {
+                return { ...task, done: !task.done };
+            }
+            return task;
+        }));
+    };
+
     return (
         <Container>
             <Header title="Lista zadań" />
@@ -42,8 +55,9 @@ function App() {
                     additionalClass="section__body--withList"
                     content={<Tasks
                         tasks={tasks}
-                        hideDone={hideDone} 
-                        />}
+                        hideDone={hideDone}
+                        toggleTaskDone={toggleTaskDone}
+                    />}
                 />}
             />
         </Container>
