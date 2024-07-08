@@ -8,22 +8,22 @@ import ButtonsArea from "./ButtonsArea";
 import Container from "./Container";
 import { useState } from "react";
 
+const defaultTasks = [
+    {
+        id: 1,
+        content: "zrobić coś",
+        done: false
+    },
+    {
+        id: 2,
+        content: "zrobić coś innego",
+        done: true
+    }
+]
+
 function App() {
 
-    const [tasks, setTasks] = useState(
-        [
-            {
-                id: 1,
-                content: "zrobić coś",
-                done: false
-            },
-            {
-                id: 2,
-                content: "zrobić coś innego",
-                done: true
-            }
-        ]
-    );
+    const [tasks, setTasks] = useState(defaultTasks);
 
     const [hideDone, setHideDone] = useState(false)
 
