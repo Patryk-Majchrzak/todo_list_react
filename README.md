@@ -7,7 +7,7 @@ Hi! Welcome to my todo list, where you can create your list of tasks that can he
 
 ## Details for users
 1. Website is available only in polish (I am about to add language selection in thee future, so it will be available in english as well)
-2. After starting the website for the first time, you should see two example tasks called "zrobić coś" (do something) and "zrobić coś innego" (do something else). "Zrobić coś innego" should be crossed out as it is marked as done. Also there will be two options called "ukryj ukończone" (hide done) and ukończ wszystkie (finish all). You should see same two tasks after refreshing the page
+2. After starting the website for the first time, you should see two example tasks called "zrobić coś" (do something) and "zrobić coś innego" (do something else). "Zrobić coś innego" should be crossed out as it is marked as done. Also there will be two options called "ukryj ukończone" (hide done) and ukończ wszystkie (finish all). If you modify tasks on the website, new tasks list will be displayed after refreshing or even when you will re-open the website on the same device
 
 <img src="for_readme/startingTasks.png">
 
@@ -38,6 +38,8 @@ Hi! Welcome to my todo list, where you can create your list of tasks that can he
 2. I used media queries to change how website will be displayed on various devices
 3. Hooks used:
 - useState
+- useEffect
+4. App saves tasks in local storage and getting initial tasks from the local storage 
 
 ## Available Scripts
 
