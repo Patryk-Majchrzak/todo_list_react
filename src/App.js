@@ -6,9 +6,10 @@ import SectionHeader from "./SectionHeader";
 import SectionBody from "./SectionBody";
 import ButtonsArea from "./ButtonsArea";
 import Container from "./Container";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const defaultTasks = [
+
+const defaultTasks = JSON.parse(localStorage.getItem("tasks")) || [
     {
         id: 1,
         content: "zrobić coś",
@@ -19,13 +20,17 @@ const defaultTasks = [
         content: "zrobić coś innego",
         done: true
     }
-]
+];
 
 function App() {
 
     const [tasks, setTasks] = useState(defaultTasks);
 
-    const [hideDone, setHideDone] = useState(false)
+    const [hideDone, setHideDone] = useState(false);
+
+    useEffect(() => {
+        localStorage.setItem("tasks", JSON.stringify(tasks))
+    }, [tasks]);
 
     const toggleTaskDone = (id) => {
         setTasks(tasks.map((task) => {
