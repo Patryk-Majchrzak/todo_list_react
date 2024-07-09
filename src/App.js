@@ -7,6 +7,7 @@ import SectionBody from "./SectionBody";
 import ButtonsArea from "./ButtonsArea";
 import Container from "./Container";
 import { useEffect, useState } from "react";
+import { welcome } from "./utils/welcome";
 
 
 const defaultTasks = JSON.parse(localStorage.getItem("tasks")) || [
@@ -23,6 +24,8 @@ const defaultTasks = JSON.parse(localStorage.getItem("tasks")) || [
 ];
 
 function App() {
+
+    welcome();
 
     const [tasks, setTasks] = useState(defaultTasks);
 
