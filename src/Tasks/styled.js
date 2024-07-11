@@ -1,5 +1,9 @@
 import styled, {css} from "styled-components";
 
+export const List = styled.ul`
+    padding-left: 0;
+`
+
 export const ListItem = styled.li`
     display: grid;
     grid-template-columns: auto 1fr auto;
