@@ -34,12 +34,15 @@ Hi! Welcome to my todo list, where you can create your list of tasks that can he
 
 ## Details for developers
 
-1. For naming classes for HTML mark-ups I've used BEM convention for any class I was using in CSS.
-2. I used media queries to change how website will be displayed on various devices
-3. Hooks used:
+1. For styling website I used styled-components NPM library
+2. Whole application has been put into ThemeProvider and themes for various colors and breakpoints for max-width have been added 
+3. I used media queries to change how website will be displayed on various devices
+4. Hooks used:
 - useState
 - useEffect
-4. App saves tasks in local storage and getting initial tasks from the local storage 
+- useRef
+- custom hook useTask
+5. App saves tasks in local storage and getting initial tasks from the local storage 
 
 ## Available Scripts
 
