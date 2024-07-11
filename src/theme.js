@@ -16,6 +16,7 @@ export const theme = {
         removeButton: "hsl(10, 96%, 53%)",
         removeButtonHover: "hsl(10, 96%, 75%)",
         removeButtonActive: "hsl(10, 96%, 85%)",
+        background: "#eee",
     },
     breakpoints: {
         large: "992",
