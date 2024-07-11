@@ -1,9 +1,9 @@
 import Form from "./Form";
 import Tasks from "./Tasks";
-import Header from "./Header";
+import MainHeader from "./Header";
 import Section from "./Section"
-import SectionHeader from "./SectionHeader";
-import SectionBody from "./SectionBody";
+import SectionHeader from "./Section/SectionHeader";
+import SectionBody from "./Section/SectionBody";
 import ButtonsArea from "./ButtonsArea";
 import Container from "./Container";
 import { useEffect, useState } from "react";
@@ -71,7 +71,7 @@ function App() {
 
     return (
         <Container>
-            <Header title="Lista zadań" />
+            <MainHeader title="Lista zadań" />
             <Section
                 sectionHeader={<SectionHeader title="Dodaj nowe zadanie" />}
                 sectionBody=
@@ -83,7 +83,7 @@ function App() {
                 sectionHeader=
                 {<SectionHeader
                     title="Lista zadań"
-                    additionalClass="section__header--withButtons"
+                    additionalAttribute="withButtons"
                     additionalContent=
                     {<ButtonsArea
                         tasks={tasks}
@@ -94,7 +94,7 @@ function App() {
                 />}
                 sectionBody=
                 {<SectionBody
-                    additionalClass="section__body--withList"
+                    additionalAttribute="withList"
                     content=
                     {<Tasks
                         tasks={tasks}
