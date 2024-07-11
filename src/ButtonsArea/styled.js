@@ -6,26 +6,26 @@ export const StyledButtonsArea = styled.div`
 `
 
 export const Button = styled.button`
-    color: hsl(180, 53%, 32%);
+    color: ${({theme}) => theme.colors.listInteractionButton};
     border:none;
     background: none;
     transition: color 0.4s;
 
-    @media (max-width:992px){
+    @media (max-width:${({theme}) => theme.breakpoints.large}px){
         flex-basis: 100%;
         margin-bottom: 20px;
     }
 
     &:hover{
         cursor: pointer;
-        color: hsl(238, 65%, 23%);
+        color: ${({theme}) => theme.colors.listInteractionButtonHover};
     }
 
     &:active{
-        color: hsl(233, 91%, 9%);
+        color: ${({theme}) => theme.colors.listInteractionButtonActive};
     }
 
     &:disabled{
-        color: #bbb;
+        color: ${({theme}) => theme.colors.ButtonDisabled};
     }
 `

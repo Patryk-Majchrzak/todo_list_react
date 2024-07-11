@@ -1,7 +1,7 @@
 import styled, {css} from "styled-components"
 
 export const Header = styled.header`
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid ${({theme}) => theme.colors.borders};
     padding: 5px;
     padding-left: 25px;
 
@@ -10,7 +10,7 @@ export const Header = styled.header`
         grid-template-columns: 1fr auto;
         align-items:center;
 
-        @media(max-width:992px){
+        @media(max-width:${({theme}) => theme.breakpoints.large}px){
             grid-template-columns: 1fr;
         }
     `}

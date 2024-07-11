@@ -6,7 +6,7 @@ export const Main = styled.main`
     overflow-wrap: anywhere;
     line-height: 1.15;
 
-    @media(max-width:992px){
+    @media(max-width:${({theme}) => theme.breakpoints.large}px){
         max-width: 98%;
     }
 `

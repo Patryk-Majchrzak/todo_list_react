@@ -8,7 +8,7 @@ export const ListItem = styled.li`
     margin-bottom: 10px;
     grid-gap: 10px;
     padding:5px;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid ${({theme}) => theme.colors.borders};
 
     ${({$hidden}) => $hidden && css`
         display: none;
@@ -23,26 +23,26 @@ export const Button = styled.button`
     transition: background 1s;
 
     ${({$toggleDone}) => $toggleDone && css`
-        background-color: hsl(160, 76%, 25%);
+        background-color: ${({theme}) => theme.colors.toggleDoneButton};
 
         &:hover{
-            background-color: hsl(124, 83%, 40%);;
+            background-color: ${({theme}) => theme.colors.toggleDoneButtonHover};
         }
 
         &:active{
-            background-color: hsl(124, 83%, 55%);
+            background-color: ${({theme}) => theme.colors.toggleDoneButtonActive};
         }
     `}
 
     ${({$remove}) => $remove && css`
-        background-color: hsl(10, 96%, 53%);
+        background-color: ${({theme}) => theme.colors.removeButton};
 
         &:hover{
-            background-color: hsl(10, 96%, 75%);
+            background-color: ${({theme}) => theme.colors.removeButtonHover};
         }
 
         &:active{
-            background-color: hsl(10, 96%, 85%);
+            background-color: ${({theme}) => theme.colors.removeButtonActive};
         }
     `}
 `
