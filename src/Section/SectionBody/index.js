@@ -1,7 +1,7 @@
 import { SectionBodyContainer } from "./styled";
 
-const SectionBody = ({content, additionalAttribute}) => (
-    <SectionBodyContainer $additionalAtribute={additionalAttribute}>
+const SectionBody = ({ content }) => (
+    <SectionBodyContainer>
         {content}
     </SectionBodyContainer>
 );
