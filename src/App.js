@@ -23,9 +23,9 @@ const defaultTasks = JSON.parse(localStorage.getItem("tasks")) || [
     }
 ];
 
-function App() {
+welcome();
 
-    welcome();
+function App() {
 
     const [tasks, setTasks] = useState(defaultTasks);
 
