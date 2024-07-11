@@ -1,4 +1,4 @@
-import "./style.css"
+import { StyledButtonsArea, Button } from "./styled";
 
 const ButtonsArea = ({ tasks, hideDone, hideDoneTasks, setAllDone}) => {
     if (!tasks.length) {
@@ -6,18 +6,17 @@ const ButtonsArea = ({ tasks, hideDone, hideDoneTasks, setAllDone}) => {
     }
 
     return (
-        <div className="buttonsArea">
-            <button className="buttonsArea__button" onClick={hideDoneTasks}>
+        <StyledButtonsArea>
+            <Button onClick={hideDoneTasks}>
                 {hideDone ? "Pokaż" : "Ukryj"} ukończone
-            </button>
-            <button
+            </Button>
+            <Button
                 disabled={tasks.every(({ done }) => done)}
-                className="buttonsArea__button"
                 onClick={setAllDone}
             >
                 Ukończ wszystkie
-            </button>
-        </div>
+            </Button>
+        </StyledButtonsArea>
     );
 };
 

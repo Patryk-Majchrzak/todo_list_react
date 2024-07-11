@@ -1,10 +1,10 @@
-import "./style.css"
+import { SectionContainer } from "./styled";
 
 const Section = ({ sectionHeader, sectionBody}) => (
-    <section className="section">
+    <SectionContainer>
         {sectionHeader}
         {sectionBody}
-    </section>
+    </SectionContainer>
 );
 
 export default Section;
