@@ -15,3 +15,9 @@ export const Header = styled.header`
         }
     `}
 `
+
+export const SectionTitle = styled.h2`
+    @media(max-width:${({theme}) => theme.breakpoints.large}px){
+        text-align:center
+    }
+ `
