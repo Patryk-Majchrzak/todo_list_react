@@ -36,13 +36,14 @@ Hi! Welcome to my todo list, where you can create your list of tasks that can he
 
 1. For styling website I used styled-components NPM library
 2. Whole application has been put into ThemeProvider and themes for various colors and breakpoints for max-width have been added 
-3. I used media queries to change how website will be displayed on various devices
-4. Hooks used:
+3. App has alternative box model in GlobalStyle
+4. I used media queries to change how website will be displayed on various devices
+5. Hooks used:
 - useState
 - useEffect
 - useRef
 - custom hook useTask
-5. App saves tasks in local storage and getting initial tasks from the local storage 
+6. App saves tasks in local storage and getting initial tasks from the local storage 
 
 ## Available Scripts
 
