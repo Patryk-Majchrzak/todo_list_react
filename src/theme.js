@@ -19,6 +19,7 @@ export const theme = {
         background: "#eee",
     },
     breakpoints: {
-        large: "992",
+        large: 992,
+        small: 576
     }
 }
