@@ -1,13 +1,13 @@
-import Form from "./Form";
-import Tasks from "./Tasks";
-import MainHeader from "./Header";
-import Section from "./Section"
-import SectionHeader from "./Section/SectionHeader";
-import SectionBody from "./Section/SectionBody";
-import ButtonsArea from "./ButtonsArea";
-import Container from "./Container";
-import { useTasks } from "./useTasks";
-import { welcome } from "./utils/welcome";
+import Form from "../Form";
+import Tasks from "../Tasks";
+import MainHeader from "../MainHeader";
+import Section from "../Section"
+import SectionHeader from "../Section/SectionHeader";
+import SectionBody from "../Section/SectionBody";
+import ButtonsArea from "../ButtonsArea";
+import { useTasks } from "../useTasks";
+import { welcome } from "../utils/welcome";
+import { Main } from "./styled";
 
 welcome();
 
@@ -24,7 +24,7 @@ function App() {
     } = useTasks();
 
     return (
-        <Container>
+        <Main>
             <MainHeader title="Lista zadań" />
             <Section
                 sectionHeader={<SectionHeader title="Dodaj nowe zadanie" />}
@@ -48,7 +48,6 @@ function App() {
                 />}
                 sectionBody=
                 {<SectionBody
-                    additionalAttribute="withList"
                     content=
                     {<Tasks
                         tasks={tasks}
@@ -58,7 +57,7 @@ function App() {
                     />}
                 />}
             />
-        </Container>
+        </Main>
     );
 }
 
