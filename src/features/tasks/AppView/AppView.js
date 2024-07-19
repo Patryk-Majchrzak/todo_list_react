@@ -1,17 +1,17 @@
 import Form from "../Form";
 import Tasks from "../Tasks";
-import MainHeader from "../MainHeader";
-import Section from "../Section"
-import SectionHeader from "../Section/SectionHeader";
-import SectionBody from "../Section/SectionBody";
+import MainHeader from "../../../common/MainHeader";
+import Section from "../../../common/Section"
+import SectionHeader from "../../../common/Section/SectionHeader";
+import SectionBody from "../../../common/Section/SectionBody";
 import ButtonsArea from "../ButtonsArea";
 import { useTasks } from "../useTasks";
-import { welcome } from "../utils/welcome";
+import { welcome } from "../../../utils/welcome"
 import { Main } from "./styled";
 
 welcome();
 
-function App() {
+function AppView() {
 
     const {
         tasks,
@@ -61,4 +61,4 @@ function App() {
     );
 }
 
-export default App;
+export default AppView;
