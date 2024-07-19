@@ -14,7 +14,7 @@ welcome();
 function AppView() {
 
     const {
-        tasks,
+        // tasks,
         hideDone,
         toggleTaskDone,
         removeTask,
@@ -30,7 +30,7 @@ function AppView() {
                 sectionHeader={<SectionHeader title="Dodaj nowe zadanie" />}
                 sectionBody=
                 {<SectionBody content=
-                    {<Form addNewTask={addNewTask} />}
+                    {<Form />}
                 />}
             />
             <Section
@@ -40,7 +40,6 @@ function AppView() {
                     additionalAttribute="withButtons"
                     additionalContent=
                     {<ButtonsArea
-                        tasks={tasks}
                         hideDone={hideDone}
                         hideDoneTasks={hideDoneTasks}
                         setAllDone={setAllDone}
@@ -50,7 +49,6 @@ function AppView() {
                 {<SectionBody
                     content=
                     {<Tasks
-                        tasks={tasks}
                         hideDone={hideDone}
                         toggleTaskDone={toggleTaskDone}
                         removeTask={removeTask}

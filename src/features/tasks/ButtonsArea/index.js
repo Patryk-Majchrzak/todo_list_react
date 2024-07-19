@@ -1,6 +1,11 @@
+import { selectTasks } from "../tasksSlice";
 import { StyledButtonsArea, Button } from "./styled";
+import { useSelector } from "react-redux";
 
-const ButtonsArea = ({ tasks, hideDone, hideDoneTasks, setAllDone}) => {
+const ButtonsArea = ({ hideDone, hideDoneTasks, setAllDone }) => {
+
+    const { tasks } = useSelector(selectTasks);
+
     if (!tasks.length) {
         return null;
     }
