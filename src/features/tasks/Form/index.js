@@ -24,7 +24,7 @@ const Form = () => {
         dispatch(addTasks({
             content: newTaskTrimmed,
             done: false,
-            id: nanoid,
+            id: nanoid(),
         }));
         resetTaskContent();
         inputRef.current.focus()

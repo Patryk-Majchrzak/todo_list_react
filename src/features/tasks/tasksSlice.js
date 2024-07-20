@@ -14,16 +14,18 @@ const tasksSlice = createSlice({
                 content: "zrobić coś innego",
                 done: true
             }
-        ]
+        ],
+        hideDone: false,
     },
     reducers:
     {
         addTasks: ({ tasks }, { payload }) => {
             tasks.push(payload);
         },
+        hideDoneTasks: (state) => {state.hideDone = !state.hideDone}
     },
 });
 
-export const { addTasks } = tasksSlice.actions;
+export const { addTasks, hideDoneTasks } = tasksSlice.actions;
 export const selectTasks = state => state.tasks;
 export default tasksSlice.reducer;
