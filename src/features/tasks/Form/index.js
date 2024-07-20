@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { FormContainer, Input, Button } from "./styled";
+import { FormContainer, Input, FormButton } from "./styled";
 import { addTasks } from "../tasksSlice";
 import { useDispatch } from "react-redux";
 import { nanoid } from "@reduxjs/toolkit";
@@ -38,7 +38,7 @@ const Form = () => {
                 onChange={({ target }) => setNewTaskContent(target.value)}
                 ref={inputRef}
             />
-            <Button>Dodaj zadanie</Button>
+            <FormButton>Dodaj zadanie</FormButton>
         </FormContainer>
     );
 };

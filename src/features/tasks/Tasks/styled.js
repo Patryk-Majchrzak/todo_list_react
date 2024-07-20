@@ -19,7 +19,7 @@ export const ListItem = styled.li`
     `}
 `  
 
-export const Button = styled.button`
+export const TaskButton = styled.button`
     width:30px;
     height:30px;
     border:none;

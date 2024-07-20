@@ -15,7 +15,7 @@ export const Input = styled.input`
     padding: 10px;
 `
 
-export const Button = styled.button`
+export const FormButton = styled.button`
     background-color: ${({theme}) => theme.colors.submitButtonBackground};
     color: ${({theme}) => theme.colors.submitButtonFont};
     padding:10px;

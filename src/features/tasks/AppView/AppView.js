@@ -7,16 +7,30 @@ import SectionBody from "../../../common/Section/SectionBody";
 import ButtonsArea from "../ButtonsArea";
 import { welcome } from "../../../utils/welcome"
 import { Main } from "./styled";
+import { Button } from "./styled";
+import { fetchExampleTasks } from "../tasksSlice";
+import { useDispatch } from "react-redux";
 
 welcome();
 
 function AppView() {
 
+    const dispatch = useDispatch();
+
     return (
         <Main>
             <MainHeader title="Lista zadań" />
             <Section
-                sectionHeader={<SectionHeader title="Dodaj nowe zadanie" />}
+                sectionHeader=
+                {<SectionHeader
+                    title="Dodaj nowe zadanie"
+                    additionalAttribute="withButtons"
+                    additionalContent=
+                    {<Button
+                        onClick={() => dispatch(fetchExampleTasks())} >
+                        Pobierz przykładowe zadania
+                    </Button>}
+                />}
                 sectionBody=
                 {<SectionBody content=
                     {<Form />}
