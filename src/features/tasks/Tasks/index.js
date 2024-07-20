@@ -6,9 +6,11 @@ const Tasks = () => {
     const { tasks, hideDone } = useSelector(selectTasks);
     const dispatch = useDispatch();
 
+    console.log(tasks.tasks);
+
     return (
         <List>
-            {tasks.map(task => (
+            {tasks.tasks.map(task => (
                 <ListItem $hidden={task.done & hideDone} key={task.id}>
                     <TaskButton $toggleDone onClick={() => dispatch(toggleTaskDone(task.id))}>
                         {task.done ? "✔" : ""}
