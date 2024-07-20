@@ -45,24 +45,12 @@ export const useTasks = () => {
         }));
     };
 
-    const addNewTask = (newTaskContent) => {
-        setTasks(tasks => [
-            ...tasks,
-            {
-                id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
-                content: newTaskContent,
-                done: false,
-            }
-        ]);
-    };
-
     return{
-        tasks,
+        // tasks,
         hideDone,
         toggleTaskDone,
         removeTask,
         hideDoneTasks,
         setAllDone,
-        addNewTask,
     }
 };

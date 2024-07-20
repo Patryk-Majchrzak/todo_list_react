@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const tasksSlice = createSliceZ({
-    name:"tasks",
+const tasksSlice = createSlice({
+    name: "tasks",
     initialState: {
         tasks: [
             {
@@ -16,12 +16,14 @@ const tasksSlice = createSliceZ({
             }
         ]
     },
-    reducers: 
-    {addTasks: ({tasks}, {payload}) => {
-        tasks.push(payload)
-    }}
-})
+    reducers:
+    {
+        addTasks: ({ tasks }, { payload }) => {
+            tasks.push(payload);
+        },
+    },
+});
 
-export const {addTasks} = tasksSlice.action;
-export const selectTasks =  state => state.tasks;
+export const { addTasks } = tasksSlice.actions;
+export const selectTasks = state => state.tasks;
 export default tasksSlice.reducer;

@@ -20,7 +20,6 @@ function AppView() {
         removeTask,
         hideDoneTasks,
         setAllDone,
-        addNewTask,
     } = useTasks();
 
     return (
