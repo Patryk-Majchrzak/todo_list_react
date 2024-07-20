@@ -42,8 +42,7 @@ Hi! Welcome to my todo list, where you can create your list of tasks that can he
 - useState
 - useEffect
 - useRef
-- custom hook useTask
-6. App saves tasks in local storage and getting initial tasks from the local storage 
+6. App is using Redux, tasksSlice is using function create slice for feature called tasks. Then reducers from tasksSlice are going to ReduxStore and then pulled out in appropiate components. Therefore in Appview I don't need to give variables further to the components they are pulling it out from the Redux store.
 
 ## Available Scripts
 
