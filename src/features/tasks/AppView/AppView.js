@@ -15,7 +15,6 @@ function AppView() {
 
     const {
         // tasks,
-        toggleTaskDone,
         removeTask,
         setAllDone,
     } = useTasks();
@@ -44,7 +43,6 @@ function AppView() {
                 {<SectionBody
                     content=
                     {<Tasks
-                        toggleTaskDone={toggleTaskDone}
                         removeTask={removeTask}
                     />}
                 />}
