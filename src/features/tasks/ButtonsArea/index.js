@@ -1,11 +1,12 @@
-import { selectTasks, hideDoneTasks, setAllDone } from "../tasksSlice";
-import { StyledButtonsArea} from "./styled";
+import { selectTasks, hideDoneTasks, setAllDone, selectHideDone } from "../tasksSlice";
+import { StyledButtonsArea } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
 import { Button } from "../AppView/styled";
 
 const ButtonsArea = () => {
 
-    const { tasks, hideDone } = useSelector(selectTasks);
+    const { tasks } = useSelector(selectTasks);
+    const { hideDone } = useSelector(selectHideDone)
     const dispatch = useDispatch();
 
     if (!tasks.length) {
