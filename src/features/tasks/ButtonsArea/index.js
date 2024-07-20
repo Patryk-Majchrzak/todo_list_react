@@ -5,8 +5,8 @@ import { Button } from "../AppView/styled";
 
 const ButtonsArea = () => {
 
-    const { tasks } = useSelector(selectTasks);
-    const { hideDone } = useSelector(selectHideDone)
+    const tasks = useSelector(selectTasks);
+    const hideDone = useSelector(selectHideDone)
     const dispatch = useDispatch();
 
     if (!tasks.length) {
