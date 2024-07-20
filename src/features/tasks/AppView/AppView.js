@@ -5,18 +5,12 @@ import Section from "../../../common/Section"
 import SectionHeader from "../../../common/Section/SectionHeader";
 import SectionBody from "../../../common/Section/SectionBody";
 import ButtonsArea from "../ButtonsArea";
-import { useTasks } from "../useTasks";
 import { welcome } from "../../../utils/welcome"
 import { Main } from "./styled";
 
 welcome();
 
 function AppView() {
-
-    const {
-        // tasks,
-        setAllDone,
-    } = useTasks();
 
     return (
         <Main>
@@ -34,9 +28,7 @@ function AppView() {
                     title="Lista zadań"
                     additionalAttribute="withButtons"
                     additionalContent=
-                    {<ButtonsArea
-                        setAllDone={setAllDone}
-                    />}
+                    {<ButtonsArea />}
                 />}
                 sectionBody=
                 {<SectionBody
