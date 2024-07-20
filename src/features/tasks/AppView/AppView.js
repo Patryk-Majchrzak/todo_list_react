@@ -15,10 +15,8 @@ function AppView() {
 
     const {
         // tasks,
-        hideDone,
         toggleTaskDone,
         removeTask,
-        hideDoneTasks,
         setAllDone,
     } = useTasks();
 
@@ -39,8 +37,6 @@ function AppView() {
                     additionalAttribute="withButtons"
                     additionalContent=
                     {<ButtonsArea
-                        hideDone={hideDone}
-                        hideDoneTasks={hideDoneTasks}
                         setAllDone={setAllDone}
                     />}
                 />}
@@ -48,7 +44,6 @@ function AppView() {
                 {<SectionBody
                     content=
                     {<Tasks
-                        hideDone={hideDone}
                         toggleTaskDone={toggleTaskDone}
                         removeTask={removeTask}
                     />}
