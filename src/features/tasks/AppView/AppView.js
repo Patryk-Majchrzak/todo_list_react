@@ -15,7 +15,6 @@ function AppView() {
 
     const {
         // tasks,
-        removeTask,
         setAllDone,
     } = useTasks();
 
@@ -42,9 +41,7 @@ function AppView() {
                 sectionBody=
                 {<SectionBody
                     content=
-                    {<Tasks
-                        removeTask={removeTask}
-                    />}
+                    {<Tasks />}
                 />}
             />
         </Main>
