@@ -1,6 +1,6 @@
+import { useDispatch, useSelector } from "react-redux";
 import { selectTasks, hideDoneTasks, setAllDone, selectHideDone } from "../tasksSlice";
 import { StyledButtonsArea } from "./styled";
-import { useDispatch, useSelector } from "react-redux";
 import { Button } from "../AppView/styled";
 
 const ButtonsArea = () => {

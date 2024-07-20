@@ -1,3 +1,4 @@
+import { useDispatch } from "react-redux";
 import Form from "../Form";
 import Tasks from "../Tasks";
 import MainHeader from "../../../common/MainHeader";
@@ -9,7 +10,6 @@ import { welcome } from "../../../utils/welcome"
 import { Main } from "./styled";
 import { Button } from "./styled";
 import { fetchExampleTasks } from "../tasksSlice";
-import { useDispatch } from "react-redux";
 
 welcome();
 
