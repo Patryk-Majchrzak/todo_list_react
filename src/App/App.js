@@ -3,29 +3,30 @@ import Nav from "./Nav";
 import TasksView from "../features/tasks/TasksView";
 import AuthorView from "../features/author/AuthorView";
 import { SingleTaskView } from "../features/tasks/SingleTaskView";
+import { toAuthorView, toSingleTaskView, toTasksView } from "./routing";
 
 function App() {
   return (
     <HashRouter>
       <Nav />
       <Switch>
-        <Route path="/zadania/:id">
+        <Route path={toSingleTaskView()}>
           <SingleTaskView />
         </Route>
       </Switch>
       <Switch>
-        <Route exact path="/zadania">
+        <Route exact path={toTasksView()}>
           <TasksView />
         </Route>
       </Switch>
       <Switch>
-        <Route path="/autor">
+        <Route path={toAuthorView()}>
           <AuthorView />
         </Route>
       </Switch>
       <Switch>
         <Route path="/">
-          <Redirect to="/zadania" />
+          <Redirect to={toTasksView()} />
         </Route>
       </Switch>
     </HashRouter>

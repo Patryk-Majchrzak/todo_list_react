@@ -1,15 +1,16 @@
+import { toAuthorView, toTasksView } from "../routing"
 import { List, ListItem, StyledNav, StyledNavLink } from "./styled"
 
 const Nav = () => (
     <StyledNav>
         <List>
             <ListItem>
-                <StyledNavLink to="/zadania" activeClassName="active">
+                <StyledNavLink to={toTasksView()} activeClassName="active">
                     Zadania
                 </StyledNavLink>
             </ListItem>
             <ListItem>
-                <StyledNavLink to="/autor" activeClassName="active">
+                <StyledNavLink to={toAuthorView()} activeClassName="active">
                     O autorze
                 </StyledNavLink>
             </ListItem>
