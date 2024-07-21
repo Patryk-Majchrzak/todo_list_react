@@ -9,25 +9,3 @@ export const FormContainer = styled.form`
         grid-template-columns: 1fr
     }
 `
-
-export const Input = styled.input`
-    border: 2px solid #eee;
-    padding: 10px;
-`
-
-export const FormButton = styled.button`
-    background-color: ${({theme}) => theme.colors.submitButtonBackground};
-    color: ${({theme}) => theme.colors.submitButtonFont};
-    padding:10px;
-    border: none;
-    transition: background 1s, transform 1.5s;
-
-    &:hover{
-        background-color: ${({theme}) => theme.colors.submitButtonBackgroundHover};
-        transform: scale(1.2);
-    }
-
-    &:active{
-        background-color: ${({theme}) => theme.colors.submitButtonBackgroundActive};
-    }
-`

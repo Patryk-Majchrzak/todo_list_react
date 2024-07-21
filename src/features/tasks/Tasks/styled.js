@@ -19,38 +19,6 @@ export const ListItem = styled.li`
     `}
 `  
 
-export const TaskButton = styled.button`
-    width:30px;
-    height:30px;
-    border:none;
-    color: white;
-    transition: background 1s;
-
-    ${({$toggleDone}) => $toggleDone && css`
-        background-color: ${({theme}) => theme.colors.toggleDoneButton};
-
-        &:hover{
-            background-color: ${({theme}) => theme.colors.toggleDoneButtonHover};
-        }
-
-        &:active{
-            background-color: ${({theme}) => theme.colors.toggleDoneButtonActive};
-        }
-    `}
-
-    ${({$remove}) => $remove && css`
-        background-color: ${({theme}) => theme.colors.removeButton};
-
-        &:hover{
-            background-color: ${({theme}) => theme.colors.removeButtonHover};
-        }
-
-        &:active{
-            background-color: ${({theme}) => theme.colors.removeButtonActive};
-        }
-    `}
-`
-
 export const TaskContent = styled.span`
     ${({$done}) => $done && css`
         text-decoration: line-through;
