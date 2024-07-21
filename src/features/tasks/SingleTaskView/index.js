@@ -15,7 +15,7 @@ export const SingleTaskView = () => {
             <Section
                 sectionHeader=
                 {<SectionHeader
-                    title={task.content}
+                    title={task ? task.content : "Nie znaleziono zadania 😢"}
                 />}
                 sectionBody=
                 {<SectionBody content=
