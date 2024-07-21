@@ -1,19 +1,24 @@
 import { Input, ResetIcon } from "../Input/styled";
 import { useGetQueryParameter } from "../useGetQueryParameter";
-import { useSearchTasks } from "../useSearchTasks";
+import { useReplaceQueryParameters } from "../useReplaceQueryParameters";
 import { Container } from "./styled";
+import queryParameterName from "../searchQueryParameterName";
 
 const SearchTasks = () => {
 
-    const query = useGetQueryParameter().get("szukaj") || "";
-    const searchTasks = useSearchTasks();
+    const query = useGetQueryParameter().get(queryParameterName) || "";
+    const ReplaceQueryParameters = useReplaceQueryParameters();
 
-    const onInputChange = ({ target }) =>
-        searchTasks(!!target.value ? target.value : undefined)
+    const onInputChange = ({ target }) => {
+        ReplaceQueryParameters({
+            key: queryParameterName,
+            value: !!target.value ? target.value : undefined,
+        })
+    }
 
     const resetInput = () => {
         if (!!query) {
-            searchTasks(undefined)
+            ReplaceQueryParameters(undefined)
         }
     }
 
