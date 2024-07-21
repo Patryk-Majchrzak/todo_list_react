@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import Form from "../Form";
-import Tasks from "../Tasks";
+import Tasks from "../TaskList";
 import MainHeader from "../../../common/MainHeader";
 import Section from "../../../common/Section"
 import SectionHeader from "../../../common/Section/SectionHeader";
