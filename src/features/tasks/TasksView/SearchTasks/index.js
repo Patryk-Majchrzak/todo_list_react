@@ -1,33 +1,33 @@
-import { Input } from "../Input/styled";
+import { Input, ResetIcon } from "../Input/styled";
 import { useGetQueryParameter } from "../useGetQueryParameter";
-// import { useSearchTasks } from "../useSearchTasks";
-import { useHistory, useLocation } from "react-router-dom/cjs/react-router-dom";
+import { useSearchTasks } from "../useSearchTasks";
+import { Container } from "./styled";
 
 const SearchTasks = () => {
 
-    const query = useGetQueryParameter().get("szukaj");
-    // const filterTasks = useSearchTasks();
-    const history = useHistory();
-    const location = useLocation();
-    const searchParameter = useGetQueryParameter();
+    const query = useGetQueryParameter().get("szukaj") || "";
+    const searchTasks = useSearchTasks();
 
-    const onInputChange = ({ target }) => {
+    const onInputChange = ({ target }) =>
+        searchTasks(!!target.value ? target.value : undefined)
 
-        if (target.value.trim() === "") {
-            searchParameter.delete("szukaj")
-        } else {
-            searchParameter.set("szukaj", target.value)
+    const resetInput = () => {
+        if (!!query) {
+            searchTasks(undefined)
         }
-
-        history.push(`${location.pathname}?${searchParameter.toString()}`)
     }
 
     return (
-        <Input
-            placeholder="Szukaj zadania"
-            value={query || ""}
-            onChange={onInputChange}
-        />
+        <Container>
+            <Input
+                placeholder="Szukaj zadania"
+                value={query || ""}
+                onChange={onInputChange}
+            />
+            <ResetIcon onClick={resetInput}>
+                ✕
+            </ResetIcon>
+        </Container>
     )
 }
 
