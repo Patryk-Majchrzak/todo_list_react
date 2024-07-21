@@ -5,7 +5,7 @@ export const Header = styled.header`
     padding: 5px;
     padding-left: 25px;
 
-    ${({$additionalAttribute}) => $additionalAttribute==="withButtons" && css`
+    ${({$additionalAttribute}) => $additionalAttribute==="grid" && css`
         display: grid;
         grid-template-columns: 1fr auto;
         align-items:center;
@@ -15,12 +15,18 @@ export const Header = styled.header`
         }
     `}
 
+     ${({$additionalAttribute}) => $additionalAttribute==="flex" && css`
+        display: flex;
+        align-items: center;
+     `}
+
     ${({$additionalAttribute}) => $additionalAttribute==="centered" && css`
         text-align: center;
     `}
 `
 
 export const SectionTitle = styled.h2`
+
     @media(max-width:${({theme}) => theme.breakpoints.large}px){
         text-align:center
     }

@@ -25,7 +25,7 @@ function TasksView() {
                 sectionHeader=
                 {<SectionHeader
                     title="Dodaj nowe zadanie"
-                    additionalAttribute="withButtons"
+                    additionalAttribute="grid"
                     additionalContent=
                     {<Button
                         onClick={() => dispatch(fetchExampleTasks())} >
@@ -53,7 +53,7 @@ function TasksView() {
                 sectionHeader=
                 {<SectionHeader
                     title="Lista zadań"
-                    additionalAttribute="withButtons"
+                    additionalAttribute="grid"
                     additionalContent=
                     {<ButtonsArea />}
                 />}
