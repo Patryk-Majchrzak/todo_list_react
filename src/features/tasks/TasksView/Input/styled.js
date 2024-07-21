@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Input = styled.input`
-    border: 2px solid #eee;
+    border: 2px solid ${({theme}) => theme.colors.borders};
     padding: 10px;
     padding-right: 30px;
 `
@@ -14,9 +14,9 @@ export const ResetIcon = styled.span`
   border-radius: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  background-color: grey;
-  color: white;
+  background-color: ${({theme}) => theme.colors.ResetIconBackground};
+  color: ${({theme}) => theme.colors.ResetIcon};
   &:hover {
-    background-color: lightgray;
+    background-color: ${({theme}) => theme.colors.ResetIconBackgroundHover};
   }
 `
