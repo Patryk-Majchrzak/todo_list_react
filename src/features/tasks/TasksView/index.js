@@ -8,12 +8,12 @@ import SectionBody from "../../../common/Section/SectionBody";
 import ButtonsArea from "../ButtonsArea";
 import { welcome } from "../../../utils/welcome"
 import { Main } from "./styled";
-import { Button } from "./styled";
+import { Button } from "../Buttons/styled";
 import { fetchExampleTasks } from "../tasksSlice";
 
 welcome();
 
-function AppView() {
+function TasksView() {
 
     const dispatch = useDispatch();
 
@@ -54,4 +54,4 @@ function AppView() {
     );
 }
 
-export default AppView;
+export default TasksView;
