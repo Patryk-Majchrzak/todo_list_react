@@ -2,7 +2,8 @@ import Section from "../../../common/Section";
 import SectionHeader from "../../../common/Section/SectionHeader";
 import SectionBody from "../../../common/Section/SectionBody";
 import { Main } from "../../tasks/TasksView/styled";
-import { Paragraph } from "./styled";
+import { Paragraph, Photo } from "./styled";
+import photo_main from "./photo_main.jpg"
 
 const Author = () => (
     <Main>
@@ -16,6 +17,9 @@ const Author = () => (
             {<SectionBody content=
                 {
                     <>
+                        <Paragraph $centered>
+                            <Photo src={photo_main} />
+                        </Paragraph>
                         <Paragraph $centered>
                             Cześć! 🖐️
                         </Paragraph>

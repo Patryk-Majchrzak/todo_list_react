@@ -7,3 +7,9 @@ export const Paragraph = styled.p`
     text-align: center;
   `}
 `
+
+export const Photo = styled.img`
+  max-width: 300px;
+  text-align: center;
+  border-radius: 50%;
+`
