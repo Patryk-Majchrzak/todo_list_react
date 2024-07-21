@@ -1,7 +1,7 @@
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom/cjs/react-router-dom";
 import Nav from "./Nav";
 import TasksView from "../features/tasks/TasksView";
-import Author from "../features/author/AuthorPage";
+import Author from "../features/author/AuthorView";
 
 function App() {
   return (
