@@ -20,8 +20,6 @@ function TasksView() {
     const isLoading = useSelector(selectIsLoading);
     const isError = useSelector(selectIsError);
 
-    console.log(isError)
-
     if (!isError) {
         return (
             <Main>
