@@ -1,4 +1,5 @@
 import styled, {css} from "styled-components";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
 export const List = styled.ul`
     padding-left: 0;
@@ -24,3 +25,7 @@ export const TaskContent = styled.span`
         text-decoration: line-through;
     `}
 `
+
+export const StyledLink = styled(Link)`
+    text-decoration: none;
+` 
