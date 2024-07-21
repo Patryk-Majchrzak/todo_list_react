@@ -5,7 +5,7 @@ import { Main } from "../../tasks/TasksView/styled";
 import { Paragraph, Photo } from "./styled";
 import photo_main from "./photo_main.jpg"
 
-const Author = () => (
+const AuthorView = () => (
     <Main>
         <Section
             sectionHeader=
@@ -42,4 +42,4 @@ const Author = () => (
     </Main>
 )
 
-export default Author;
+export default AuthorView;
