@@ -1,15 +1,16 @@
 import { useDispatch } from "react-redux";
-import Form from "../Form";
-import Tasks from "../TaskList";
+import Form from "./Form";
+import TaskList from "./TaskList";
 import MainHeader from "../../../common/MainHeader";
 import Section from "../../../common/Section"
 import SectionHeader from "../../../common/Section/SectionHeader";
 import SectionBody from "../../../common/Section/SectionBody";
-import ButtonsArea from "../ButtonsArea";
+import ButtonsArea from "./ButtonsArea";
 import { welcome } from "../../../utils/welcome"
 import { Main } from "./styled";
-import { Button } from "../Buttons/styled";
+import { Button } from "./Buttons/styled";
 import { fetchExampleTasks } from "../tasksSlice";
+import SearchTasks from "./SearchTasks";
 
 welcome();
 
@@ -36,6 +37,18 @@ function TasksView() {
                     {<Form />}
                 />}
             />
+
+            <Section
+                sectionHeader=
+                {<SectionHeader
+                    title="Wyszukiwarka zadań"
+                />}
+                sectionBody=
+                {<SectionBody content=
+                    {<SearchTasks />}
+                />}
+            />
+
             <Section
                 sectionHeader=
                 {<SectionHeader
@@ -47,7 +60,7 @@ function TasksView() {
                 sectionBody=
                 {<SectionBody
                     content=
-                    {<Tasks />}
+                    {<TaskList />}
                 />}
             />
         </Main>
