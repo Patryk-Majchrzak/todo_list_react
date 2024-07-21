@@ -30,7 +30,7 @@ export const SingleTaskView = () => {
                 />}
                 sectionBody=
                 {<SectionBody content=
-                    {
+                    {!!task && (
                         <>
                             <Strong>
                                 Ukończono:
@@ -38,7 +38,7 @@ export const SingleTaskView = () => {
                             {" "}
                             {task.done ? "tak" : "nie"}
                         </>
-                    }
+                    )}
                 />}
             />
         </Main>
