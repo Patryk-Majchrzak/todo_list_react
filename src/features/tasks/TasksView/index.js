@@ -9,7 +9,7 @@ import ButtonsArea from "./ButtonsArea";
 import { welcome } from "../../../utils/welcome"
 import { Main } from "./styled";
 import { Button } from "./Buttons/styled";
-import { fetchExampleTasks, selectIsError, selectIsLoading } from "../tasksSlice";
+import { fetchExampleTasks, selectError, selectLoading } from "../tasksSlice";
 import SearchTasks from "./SearchTasks";
 
 welcome();
@@ -17,16 +17,10 @@ welcome();
 function TasksView() {
 
     const dispatch = useDispatch();
-    const isLoading = useSelector(selectIsLoading);
-    const isError = useSelector(selectIsError);
+    const loading = useSelector(selectLoading);
+    const error = useSelector(selectError);
 
-    const onButtonClick = () => {
-        if (window.confirm("Are you sure you want to proceed? (this action will delete your previous list)")) {
-            dispatch(fetchExampleTasks())
-        }
-    }
-
-    if (!isError) {
+    if (!error) {
         return (
             <Main>
                 <MainHeader title="Lista zadań" />
@@ -37,10 +31,10 @@ function TasksView() {
                         additionalAttribute="grid"
                         additionalContent=
                         {<Button
-                            onClick={() => onButtonClick()}
-                            disabled={isLoading}
+                            onClick={() => dispatch(fetchExampleTasks())}
+                            disabled={loading}
                         >
-                            {isLoading ? "Ładuję zadania" : "Pobierz przykładowe zadania"}
+                            {loading ? "Ładuję zadania" : "Pobierz przykładowe zadania"}
                         </Button>}
                     />}
                     sectionBody=
