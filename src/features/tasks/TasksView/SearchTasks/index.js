@@ -1,7 +1,7 @@
-import { Input, ResetIcon } from "../Input/styled";
+import { Input } from "../Input/styled";
 import { useGetQueryParameter } from "../useGetQueryParameter";
 import { useReplaceQueryParameters } from "../useReplaceQueryParameters";
-import { Container } from "./styled";
+import { Container, ResetIcon } from "./styled";
 import queryParameterName from "../searchQueryParameterName";
 
 const SearchTasks = () => {
