@@ -18,7 +18,7 @@ Hi! Welcome to my todo list, where you can create your list of tasks that can he
 
 <img src="for_readme/addNewTaskAnimation.gif">
 
-4. You can also click on "Pobierz przykładowe zadania" (download example tasks) button to geenerate 2 example tasks in tasks list. You have to confirm that you want to proceed. Warning: example tasks will replace tasks that are already in tasks list. If you decide to proceed button wil be disabed for 1 second and will change its text to "Ładuję zadania" (loading tasks). After loading tasks "zrobuć coś" (do something) and crossed out "zrobić coś innego" (do something else) should appear. 
+4. You can also click on "Pobierz przykładowe zadania" (download example tasks) button to geenerate 2 example tasks in tasks list. Button wil be disabed for 2 seconds and will change its text to "Ładuję zadania" (loading tasks). After loading tasks "zrobuć coś" (do something) and crossed out "zrobić coś innego" (do something else) should appear. 
 
 <img src="for_readme/fetchExampleTasksAnimation.gif">
 
