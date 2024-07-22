@@ -1,10 +1,9 @@
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom/cjs/react-router-dom";
+import { Link, useParams } from "react-router-dom/cjs/react-router-dom";
 import Section from "../../../common/Section";
 import SectionHeader from "../../../common/Section/SectionHeader";
 import SectionBody from "../../../common/Section/SectionBody";
 import { Main } from "../../tasks/TasksView/styled";
-import { useParams } from "react-router-dom/cjs/react-router-dom";
 import { getTaskById } from "../tasksSlice";
 import { Image, Strong } from "./style";
 import arrow from "./arrow.png"
