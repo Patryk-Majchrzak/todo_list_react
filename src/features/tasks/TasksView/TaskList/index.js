@@ -3,6 +3,7 @@ import { getTaskByQuery, toggleTaskDone, removeTask, selectHideDone } from "../.
 import { ListItem, TaskContent, List, StyledLink } from "./styled";
 import { TaskButton } from "../Buttons/styled";
 import { useGetQueryParameter } from "../useGetQueryParameter";
+import { toSingleTaskView } from "../../../../App/routing";
 
 const TaskList = () => {
     const query = useGetQueryParameter().get("szukaj");
@@ -18,7 +19,7 @@ const TaskList = () => {
                         {task.done ? "✔" : ""}
                     </TaskButton>
                     <TaskContent $done={task.done}>
-                        <StyledLink to={`/zadania/${task.id}`}>{task.content}</StyledLink>
+                        <StyledLink to={`${toSingleTaskView({id: task.id})}`}>{task.content}</StyledLink>
                     </TaskContent>
                     <TaskButton $remove onClick={() => dispatch(removeTask(task.id))}>
                         🗑

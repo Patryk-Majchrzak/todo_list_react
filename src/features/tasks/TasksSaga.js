@@ -9,7 +9,7 @@ function* showExampleTasks() {
         yield put(setError(false));
         yield delay(1000);
         const exampleTasks = yield call(getExampleTasks);
-        yield put(setTasks(exampleTasks));
+        yield put(setTasks(exampleTasks.data));
         yield put(setLoading(false))
     } catch (error) {
         yield put(setError(true));
