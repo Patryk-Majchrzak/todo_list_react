@@ -20,6 +20,12 @@ function TasksView() {
     const isLoading = useSelector(selectIsLoading);
     const isError = useSelector(selectIsError);
 
+    const onButtonClick = () => {
+        if (window.confirm("Are you sure you want to proceed? (this action will delete your previous list)")) {
+            dispatch(fetchExampleTasks())
+        }
+    }
+
     if (!isError) {
         return (
             <Main>
@@ -31,7 +37,7 @@ function TasksView() {
                         additionalAttribute="grid"
                         additionalContent=
                         {<Button
-                            onClick={() => dispatch(fetchExampleTasks())}
+                            onClick={() => onButtonClick()}
                             disabled={isLoading}
                         >
                             {isLoading ? "Ładuję zadania" : "Pobierz przykładowe zadania"}
@@ -72,16 +78,18 @@ function TasksView() {
         );
     } else {
         return (
-            <Section
-                sectionHeader=
-                {<SectionHeader
-                    title="Błąd przy pobieraniu zadań"
-                />}
-                sectionBody=
-                {<SectionBody content=
-                    "Nie udało się pobrać zadań 😢 Spróbuj ponownie później"
-                />}
-            />
+            <Main>
+                <Section
+                    sectionHeader=
+                    {<SectionHeader
+                        title="Błąd przy pobieraniu zadań"
+                    />}
+                    sectionBody=
+                    {<SectionBody content=
+                        "Nie udało się pobrać zadań 😢 Spróbuj ponownie później"
+                    />}
+                />
+            </Main>
         )
     }
 }
