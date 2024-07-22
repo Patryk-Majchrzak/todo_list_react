@@ -18,7 +18,10 @@ const SearchTasks = () => {
 
     const resetInput = () => {
         if (!!query) {
-            ReplaceQueryParameters(undefined)
+            ReplaceQueryParameters({
+                key: queryParameterName,
+                value: undefined,
+            })
         }
     }
 
