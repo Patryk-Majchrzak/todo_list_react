@@ -1,7 +1,7 @@
 import { toAuthorView, toTasksView } from "../routing"
 import { List, ListItem, StyledNav, StyledNavLink } from "./styled"
 
-const Nav = () => (
+const Navigation = () => (
     <StyledNav>
         <List>
             <ListItem>
@@ -16,6 +16,6 @@ const Nav = () => (
             </ListItem>
         </List>
     </StyledNav>
-)
+);
 
-export default Nav
+export default Navigation;

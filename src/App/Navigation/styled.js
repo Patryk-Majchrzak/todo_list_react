@@ -10,10 +10,11 @@ export const List = styled.ul`
     display: flex;
     list-style-type: none;
     justify-content: center;
+    padding: 0;
 `
 
 export const ListItem = styled.li`
-    margin-left: 20px;
+    margin-left: 40px;
 `
 
 export const StyledNavLink = styled(NavLink)`
@@ -22,5 +23,9 @@ export const StyledNavLink = styled(NavLink)`
 
     &.active {
         font-weight: bold;
+    };
+
+    &:hover {
+        border-bottom: 1px solid;
     }
 `
