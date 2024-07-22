@@ -1,0 +1,12 @@
+[
+    {
+        "id": "1A",
+        "content": "zrobić coś",
+        "done": false
+    },
+    {
+        "id": "2A",
+        "content": "zrobić coś innego",
+        "done": true
+    }
+]
