@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { DropdownContainer, DropdownContent, Option, OptionImage } from './styled';
 import flagPL from "./flagPL.webp"
 import flagUK from "./flagUK.svg"
-import { setLanguage } from '../../features/tasks/tasksSlice';
+import { setLanguage } from '../../features/tasks/languageSlice';
 import { useDispatch } from 'react-redux';
 import { changeLanguage } from 'i18next';
 
