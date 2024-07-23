@@ -1,5 +1,4 @@
 import { call, put, takeLatest, select, takeEvery, delay } from "redux-saga/effects";
-import i18next from "i18next";
 import { fetchExampleTasks, selectTasks, fetchExampleTasksError, fetchExampleTasksSuccess, setLanguage, selectLanguage } from "./tasksSlice";
 import { saveTasksInLocalStorage } from "./localStorage";
 import { getExampleTasks } from "./getExampleTasks";
