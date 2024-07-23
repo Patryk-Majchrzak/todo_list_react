@@ -6,16 +6,17 @@ export const DropdownContainer = styled.div`
 `;
 
 export const DropdownContent = styled.div`
-  display: none;
+  opacity: 0;
   position: absolute;
   top: 100%;
   left: 0;
   min-width: 160px;
   z-index: 1;
   background-color: ${({ theme }) => theme.colors.navBackground};
+  transition: opacity 0.3s ease-in-out;
 
   ${DropdownContainer}:hover & {
-    display: block;
+    opacity: 1;
   }
 `;
 
