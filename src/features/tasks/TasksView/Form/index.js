@@ -1,15 +1,19 @@
 import { useState, useRef } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { nanoid } from "@reduxjs/toolkit";
 import { FormContainer } from "./styled";
-import { addTasks } from "../../tasksSlice";
+import { addTasks, selectLanguage } from "../../tasksSlice";
 import { FormButton } from "../Buttons/styled";
 import { Input } from "../Input/styled";
+import { translations } from "../../../../App/LanguageSelector/translations";
 
 const Form = () => {
     const [newTaskContent, setNewTaskContent] = useState("");
     const inputRef = useRef(null);
     const dispatch = useDispatch();
+
+    const language = useSelector(selectLanguage);
+    const t = translations["Form"][language];
     
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -35,12 +39,12 @@ const Form = () => {
     return (
         <FormContainer onSubmit={onFormSubmit}>
             <Input
-                placeholder="Co jest do zrobienia?"
+                placeholder={t.placeholder}
                 value={newTaskContent}
                 onChange={({ target }) => setNewTaskContent(target.value)}
                 ref={inputRef}
             />
-            <FormButton>Dodaj zadanie</FormButton>
+            <FormButton>{t.addTaskButton}</FormButton>
         </FormContainer>
     );
 };

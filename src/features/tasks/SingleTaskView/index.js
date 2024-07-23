@@ -4,13 +4,19 @@ import Section from "../../../common/Section";
 import SectionHeader from "../../../common/Section/SectionHeader";
 import SectionBody from "../../../common/Section/SectionBody";
 import { Main } from "../../tasks/TasksView/styled";
-import { getTaskById } from "../tasksSlice";
+import { getTaskById, selectLanguage } from "../tasksSlice";
 import { Image, Strong } from "./style";
 import arrow from "./arrow.png"
+import { toTasksView } from "../../../App/routing";
+import { translations } from "../../../App/LanguageSelector/translations";
 
 export const SingleTaskView = () => {
     const { id } = useParams();
     const task = useSelector(state => getTaskById(state, id))
+
+    const language = useSelector(selectLanguage);
+    const tTask = translations["SingleTaskView"][language];
+    const tNav = translations["Navigation"][language];
 
     return (
         <Main>
@@ -19,10 +25,10 @@ export const SingleTaskView = () => {
                 {<SectionHeader
                     title={
                         <>
-                            <Link to="/zadania">
+                            <Link to={toTasksView(tNav.section_1)}>
                                 <Image src={arrow} />
                             </Link>
-                            {task ? task.content : "Nie znaleziono zadania 😢"}
+                            {task ? task.content : tTask.error}
                         </>
                     }
                     additionalAttribute="flex"
@@ -32,10 +38,10 @@ export const SingleTaskView = () => {
                     {!!task && (
                         <>
                             <Strong>
-                                Ukończono:
+                                {tTask.done}
                             </Strong>
                             {" "}
-                            {task.done ? "tak" : "nie"}
+                            {task.done ? tTask.confirmation : tTask.negation}
                         </>
                     )}
                 />}

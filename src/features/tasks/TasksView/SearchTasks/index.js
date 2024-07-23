@@ -1,10 +1,16 @@
+import { useSelector } from "react-redux";
 import { Input } from "../Input/styled";
 import { useGetQueryParameter } from "../useGetQueryParameter";
 import { useReplaceQueryParameters } from "../useReplaceQueryParameters";
 import { Container, ResetIcon } from "./styled";
 import queryParameterName from "../searchQueryParameterName";
+import { selectLanguage } from "../../tasksSlice";
+import { translations } from "../../../../App/LanguageSelector/translations";
 
 const SearchTasks = () => {
+
+    const language = useSelector(selectLanguage);
+    const t = translations["SearchTasks"][language];
 
     const query = useGetQueryParameter().get(queryParameterName) || "";
     const ReplaceQueryParameters = useReplaceQueryParameters();
@@ -28,7 +34,7 @@ const SearchTasks = () => {
     return (
         <Container>
             <Input
-                placeholder="Szukaj zadania"
+                placeholder={t.placeholder}
                 value={query || ""}
                 onChange={onInputChange}
             />

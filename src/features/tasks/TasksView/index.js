@@ -9,8 +9,9 @@ import ButtonsArea from "./ButtonsArea";
 import { welcome } from "../../../utils/welcome"
 import { Main } from "./styled";
 import { Button } from "./Buttons/styled";
-import { fetchExampleTasks, selectError, selectLoading } from "../tasksSlice";
+import { fetchExampleTasks, selectError, selectLanguage, selectLoading } from "../tasksSlice";
 import SearchTasks from "./SearchTasks";
+import { translations } from "../../../App/LanguageSelector/translations";
 
 welcome();
 
@@ -20,21 +21,24 @@ function TasksView() {
     const loading = useSelector(selectLoading);
     const error = useSelector(selectError);
 
+    const language = useSelector(selectLanguage);
+    const t = translations["tasksView"][language];
+
     if (!error) {
         return (
             <Main>
-                <MainHeader title="Lista zadań" />
+                <MainHeader title={t.header} />
                 <Section
                     sectionHeader=
                     {<SectionHeader
-                        title="Dodaj nowe zadanie"
+                        title={t.formTitle}
                         additionalAttribute="grid"
                         additionalContent=
                         {<Button
                             onClick={() => dispatch(fetchExampleTasks())}
                             disabled={loading}
                         >
-                            {loading ? "Ładuję zadania" : "Pobierz przykładowe zadania"}
+                            {loading ? t.loadingExampleTasks : t.downloadExampleTasks}
                         </Button>}
                     />}
                     sectionBody=
@@ -46,7 +50,7 @@ function TasksView() {
                 <Section
                     sectionHeader=
                     {<SectionHeader
-                        title="Wyszukiwarka zadań"
+                        title={t.searchTitle}
                     />}
                     sectionBody=
                     {<SectionBody content=
@@ -57,7 +61,7 @@ function TasksView() {
                 <Section
                     sectionHeader=
                     {<SectionHeader
-                        title="Lista zadań"
+                        title={t.header}
                         additionalAttribute="grid"
                         additionalContent=
                         {<ButtonsArea />}
@@ -76,11 +80,11 @@ function TasksView() {
                 <Section
                     sectionHeader=
                     {<SectionHeader
-                        title="Błąd przy pobieraniu zadań"
+                        title={t.exampleTasksErrorHeader}
                     />}
                     sectionBody=
                     {<SectionBody content=
-                        "Nie udało się pobrać zadań 😢 Spróbuj ponownie później"
+                        {t.exampleTasksErrorBody}
                     />}
                 />
             </Main>

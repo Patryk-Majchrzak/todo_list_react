@@ -45,70 +45,68 @@ export const translations = {
     },
    SingleTaskView: {
         pl: {
-            done: "Ukończono",
+            done: "Ukończono:",
             confirmation: "tak",
             negation: "nie",
+            error: "Nie znaleziono zadania 😢",
         },
         en: {
-            done: "Done",
+            done: "Done:",
             confirmation: "yes",
-            negation: "no"
+            negation: "no",
+            error: "I couldn't find your task😢",
         },
     },
-    header: {
-        pl: "Lista zadań",
-        en: "Tasks list",
-    },
-    addTaskSection: {
+    Form: {
         pl: {
-            header: "Dodaj nowe zadanie",
             placeholder: "Co jest do zrobienia",
             addTaskButton: "Dodaj zadanie",
-            downloadExampleTasksButton: "Pobierz przykładowe zadania",
-            loadingExampleTasks: "Ładuję zadania",
         },
         en: {
-            header: "Add new task",
             placeholder: "What needs to be done?",
             addTaskButton: "Add task",
-            downloadExampleTasksButton: "Download example tasks",
-            loadingExampleTasks: "Loading tasks",
         },
     },   
-    SearchSection: {
+    SearchTasks: {
         pl: {
-            header: "Wyszukiwarka",
             placeholder: "Szukaj zadania",
         },
         en: {
-            header: "Search engine",
             placeholder: "Search for tasks",
         },
     },
-    tasksSection: {
+    tasksView: {
         pl: {
             header: "Lista zadań",
-            markAllDoneButton: "Ukończ wszystkie",
-            showDone: "Pokaż ukończone",
-            hideDone: "Ukryj ukończone",
+            formTitle: "Dodaj nowe zadanie",
+            downloadExampleTasks: "Pobierz przykładowe zadania",
+            loadingExampleTasks: "Ładuję zadania",
+            searchTitle: "Wyszukiwarka zadań",
+            exampleTasksErrorHeader: "Błąd przy pobieraniu zadań",
+            exampleTasksErrorBody: "Nie udało się pobrać zadań 😢 Spróbuj ponownie później",
         },
         en: {
             header: "Tasks list",
-            markAllDoneButton: "Finish all tasks",
-            showDone: "Show finished tasks",
-            hideDone: "Hide finished tasks",
-        },
-    },
-    errors: {
-        pl: {
-            exampleTasksErrorHeader: "Błąd przy pobieraniu zadań",
-            exampleTasksErrorBody: "Nie udało się pobrać zadań 😢 Spróbuj ponownie później",
-            singleTaskError: "Nie znaleziono zadania 😢"
-        },
-        en: {
+            formTitle: "Add new task",
+            downloadExampleTasks: "Download example tasks",
+            loadingExampleTasks: "Loading tasks",
+            searchTitle: "Search engine",
             exampleTasksErrorHeader: "Issue with downloading tasks",
             exampleTasksErrorBody: "I couldn't download example tasks 😢 Please try again later",
-            singleTaskError: "I couldn't find your task😢"
         },
     },
+    ButtonsArea: {
+        pl: {
+            show: "Pokaż",
+            hide: "Ukryj",
+            done: "ukończone",
+            markAllTasksDone: "Ukończ wszystkie",
+        },
+        en: {
+            show: "show",
+            hide: "hide",
+            done: "done",
+            markAllTasksDone: "finish all tasks",
+        }   
+    }
   };
