@@ -11,7 +11,7 @@ const LanguageSelector = () => {
   const dispatch = useDispatch();
 
   const languageOptions = [
-    {id: 1, image: flagPL, value:"p;"},
+    {id: 1, image: flagPL, value:"pl"},
     {id: 2, image: flagUK, value:"en"},
   ];
 
