@@ -8,7 +8,6 @@ const tasksSlice = createSlice({
         hideDone: false,
         loading: false,
         error: false,
-        language: "pl"
     },
     reducers:
     {
@@ -41,9 +40,6 @@ const tasksSlice = createSlice({
           fetchExampleTasksError: (state) => {
             state.loading = false;
           },
-          setLanguage: (state, {payload: language}) => {
-            state.language = language
-          }
     },
 });
 
@@ -57,7 +53,6 @@ export const {
     setTasks,
     fetchExampleTasksSuccess,
     fetchExampleTasksError,
-    setLanguage,
 } = tasksSlice.actions;
 
 const selectTasksState = state => state.tasks;
@@ -66,7 +61,6 @@ export const selectTasks = state => selectTasksState(state).tasks;
 export const selectHideDone = state => selectTasksState(state).hideDone;
 export const selectLoading = state => selectTasksState(state).loading;
 export const selectError = state => selectTasksState(state).error;
-export const selectLanguage = state => selectTasksState(state).language;
 
 export const getTaskById = (state, taskId) =>
     selectTasks(state).find(({ id }) => id === taskId);
