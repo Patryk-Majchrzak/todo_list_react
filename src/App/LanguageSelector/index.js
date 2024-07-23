@@ -4,16 +4,16 @@ import flagPL from "./flagPL.webp"
 import flagUK from "./flagUK.svg"
 import { setLanguage } from '../../features/tasks/languageSlice';
 import { useDispatch } from 'react-redux';
-import { changeLanguage } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 const LanguageSelector = () => {
   const [activeLanguageOptionId, setActiveLanguageOptionId] = useState(1);
-
   const dispatch = useDispatch();
+  const { i18n } = useTranslation();
 
   const languageOptions = [
-    {id: 1, image: flagPL, value:"pl"},
-    {id: 2, image: flagUK, value:"en"},
+    { id: 1, image: flagPL, value: "pl" },
+    { id: 2, image: flagUK, value: "en" },
   ];
 
   const activeLanguage = languageOptions.find(languageOption => languageOption.id === activeLanguageOptionId)
@@ -21,15 +21,15 @@ const LanguageSelector = () => {
   const handleOptionClick = (optionId, language) => {
     setActiveLanguageOptionId(optionId);
     dispatch(setLanguage(language));
-    changeLanguage(language)
+    i18n.changeLanguage(language);
   };
 
   return (
-    <DropdownContainer> 
+    <DropdownContainer>
       <Option>
-        <OptionImage 
-        src={activeLanguage.image} 
-        alt={activeLanguage.value} />
+        <OptionImage
+          src={activeLanguage.image}
+          alt={activeLanguage.value} />
       </Option>
       <DropdownContent>
         {languageOptions.filter(option => option.id !== activeLanguageOptionId).map((option) => (
@@ -37,7 +37,7 @@ const LanguageSelector = () => {
             key={option.id}
             onClick={() => handleOptionClick(option.id, option.value)}
           >
-            <OptionImage src={option.image} alt={option.value}/>
+            <OptionImage src={option.image} alt={option.value} />
           </Option>
         ))}
       </DropdownContent>

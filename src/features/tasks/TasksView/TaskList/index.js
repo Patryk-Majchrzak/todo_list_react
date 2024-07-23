@@ -12,8 +12,6 @@ const TaskList = () => {
     const hideDone = useSelector(selectHideDone);
     const dispatch = useDispatch();
 
-    const [t] = useTranslation("translation");
-
     return (
         <List>
             {tasks.map(task => (
@@ -22,7 +20,7 @@ const TaskList = () => {
                         {task.done ? "✔" : ""}
                     </TaskButton>
                     <TaskContent $done={task.done}>
-                        <StyledLink to={`${toSingleTaskView(t("Navigation.section_1"), {id: task.id})}`}>{task.content}</StyledLink>
+                        <StyledLink to={`${toSingleTaskView({ id: task.id })}`}>{task.content}</StyledLink>
                     </TaskContent>
                     <TaskButton $remove onClick={() => dispatch(removeTask(task.id))}>
                         🗑

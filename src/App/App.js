@@ -1,5 +1,4 @@
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom/cjs/react-router-dom";
-import { useTranslation } from "react-i18next";
 import TasksView from "../features/tasks/TasksView";
 import AuthorView from "../features/author/AuthorView";
 import { SingleTaskView } from "../features/tasks/SingleTaskView";
@@ -8,29 +7,27 @@ import Navigation from "./Navigation";
 
 function App() {
 
-  const [t] = useTranslation("translation")
-
   return (
     <HashRouter>
       <Navigation />
       <Switch>
-        <Route path={toSingleTaskView(t("Navigation.section_1"))}>
+        <Route path={toSingleTaskView()}>
           <SingleTaskView />
         </Route>
       </Switch>
       <Switch>
-        <Route exact path={toTasksView(t("Navigation.section_1"))}>
+        <Route exact path={toTasksView()}>
           <TasksView />
         </Route>
       </Switch>
       <Switch>
-        <Route path={toAuthorView(t("Navigation.section_2"))}>
+        <Route path={toAuthorView()}>
           <AuthorView />
         </Route>
       </Switch>
       <Switch>
         <Route path="/">
-          <Redirect to={toTasksView(t("Navigation.section_1"))} />
+          <Redirect to={toTasksView()} />
         </Route>
       </Switch>
     </HashRouter>

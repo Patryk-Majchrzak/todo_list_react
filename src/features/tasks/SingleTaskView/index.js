@@ -23,7 +23,7 @@ export const SingleTaskView = () => {
                 {<SectionHeader
                     title={
                         <>
-                            <Link to={toTasksView(t("Navigation.section_1"))}>
+                            <Link to={toTasksView()}>
                                 <Image src={arrow} />
                             </Link>
                             {task ? task.content : t("SingleTaskView.error")}
