@@ -9,6 +9,7 @@ i18n
     fallbackLng: 'pl',
     lng: 'pl',
     debug: true,
+    ns: ['exampleTasks'],
     interpolation: {
       escapeValue: false,
     },
