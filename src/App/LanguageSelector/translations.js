@@ -1,4 +1,4 @@
-const translations = {
+export const translations = {
     Navigation: {
         pl: {
             section_1: "Zadania",
@@ -17,7 +17,8 @@ const translations = {
             greeting: "Cześć! 🖐️",
             name: "Nazywam się",
             age: "i mam 29 lat.",
-            workPlace: "Przez około 6 lat pracowałem w Infosysie",
+            workPlace: "Przez około 6 lat pracowałem w ",
+            Infosys: "Infosysie",
             workPosition: "jako księgowy dla zagranicznych klientów (głównie dla filii angielskich, irlandzkich oraz kanadyjskich).",
             future: "Postanowiłem spróbować swoich sił jako front-end developer, a w przyszłości być może full-stack",
         },
@@ -26,7 +27,8 @@ const translations = {
             greeting: "Hello! 🖐️",
             name: "My name is",
             age: "and I'm 29 years old.",
-            workPlace: "I worked for about 6 years at Infosys",
+            workPlace: "I worked for about 6 years at ",
+            Infosys: "Infosys",
             workPosition: "as an accountant for foreign clients (mainly for English, Irish, and Canadian branches).",
             future: "I decided to try my hand as a front-end developer, and maybe full-stack in the future",
         }
@@ -41,7 +43,7 @@ const translations = {
             task_2: "do something else",
         },
     },
-    singleTaskView: {
+   SingleTaskView: {
         pl: {
             done: "Ukończono",
             confirmation: "tak",
@@ -63,15 +65,17 @@ const translations = {
             placeholder: "Co jest do zrobienia",
             addTaskButton: "Dodaj zadanie",
             downloadExampleTasksButton: "Pobierz przykładowe zadania",
+            loadingExampleTasks: "Ładuję zadania",
         },
         en: {
             header: "Add new task",
             placeholder: "What needs to be done?",
             addTaskButton: "Add task",
             downloadExampleTasksButton: "Download example tasks",
+            loadingExampleTasks: "Loading tasks",
         },
     },   
-    searchSection: {
+    SearchSection: {
         pl: {
             header: "Wyszukiwarka",
             placeholder: "Szukaj zadania",
@@ -93,6 +97,18 @@ const translations = {
             markAllDoneButton: "Finish all tasks",
             showDone: "Show finished tasks",
             hideDone: "Hide finished tasks",
+        },
+    },
+    errors: {
+        pl: {
+            exampleTasksErrorHeader: "Błąd przy pobieraniu zadań",
+            exampleTasksErrorBody: "Nie udało się pobrać zadań 😢 Spróbuj ponownie później",
+            singleTaskError: "Nie znaleziono zadania 😢"
+        },
+        en: {
+            exampleTasksErrorHeader: "Issue with downloading tasks",
+            exampleTasksErrorBody: "I couldn't download example tasks 😢 Please try again later",
+            singleTaskError: "I couldn't find your task😢"
         },
     },
   };
