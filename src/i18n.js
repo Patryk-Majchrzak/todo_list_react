@@ -8,7 +8,7 @@ i18n
   .init({
     fallbackLng: 'pl',
     lng: 'pl',
-    debug: true,
+    debug: false,
     resources: {
       pl: {
         translation: translation_pl
