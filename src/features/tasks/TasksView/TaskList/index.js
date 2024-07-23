@@ -4,7 +4,7 @@ import { ListItem, TaskContent, List, StyledLink } from "./styled";
 import { TaskButton } from "../Buttons/styled";
 import { useGetQueryParameter } from "../useGetQueryParameter";
 import { toSingleTaskView } from "../../../../App/routing";
-import { translations } from "../../../../App/LanguageSelector/translations";
+import { translations } from "../../../../translations";
 
 const TaskList = () => {
     const query = useGetQueryParameter().get("szukaj");

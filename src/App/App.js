@@ -1,7 +1,7 @@
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom/cjs/react-router-dom";
 import { useSelector } from "react-redux";
 import { selectLanguage } from "../features/tasks/tasksSlice";
-import { translations } from "./LanguageSelector/translations";
+import { translations } from "../translations";
 import TasksView from "../features/tasks/TasksView";
 import AuthorView from "../features/author/AuthorView";
 import { SingleTaskView } from "../features/tasks/SingleTaskView";

@@ -5,7 +5,7 @@ import { useReplaceQueryParameters } from "../useReplaceQueryParameters";
 import { Container, ResetIcon } from "./styled";
 import queryParameterName from "../searchQueryParameterName";
 import { selectLanguage } from "../../tasksSlice";
-import { translations } from "../../../../App/LanguageSelector/translations";
+import { translations } from "../../../../translations";
 
 const SearchTasks = () => {
 

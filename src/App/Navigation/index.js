@@ -1,7 +1,7 @@
 import LanguageSelector from "../LanguageSelector";
 import { toAuthorView, toTasksView } from "../routing"
 import { List, ListItem, StyledNav, StyledNavLink, Container, StyledSpan } from "./styled"
-import { translations } from "../LanguageSelector/translations";
+import { translations } from "../../translations";
 import { useSelector } from "react-redux";
 import { selectLanguage } from "../../features/tasks/tasksSlice";
 

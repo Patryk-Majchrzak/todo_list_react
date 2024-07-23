@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { translations } from "../../../App/LanguageSelector/translations";
+import { translations } from "../../../translations";
 import { selectLanguage } from "../../tasks/tasksSlice";
 import Section from "../../../common/Section";
 import SectionHeader from "../../../common/Section/SectionHeader";

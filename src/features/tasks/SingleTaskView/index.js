@@ -8,7 +8,7 @@ import { getTaskById, selectLanguage } from "../tasksSlice";
 import { Image, Strong } from "./style";
 import arrow from "./arrow.png"
 import { toTasksView } from "../../../App/routing";
-import { translations } from "../../../App/LanguageSelector/translations";
+import { translations } from "../../../translations";
 
 export const SingleTaskView = () => {
     const { id } = useParams();

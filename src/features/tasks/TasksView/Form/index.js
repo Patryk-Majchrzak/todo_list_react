@@ -5,7 +5,7 @@ import { FormContainer } from "./styled";
 import { addTasks, selectLanguage } from "../../tasksSlice";
 import { FormButton } from "../Buttons/styled";
 import { Input } from "../Input/styled";
-import { translations } from "../../../../App/LanguageSelector/translations";
+import { translations } from "../../../../translations";
 
 const Form = () => {
     const [newTaskContent, setNewTaskContent] = useState("");

@@ -11,7 +11,7 @@ import { Main } from "./styled";
 import { Button } from "./Buttons/styled";
 import { fetchExampleTasks, selectError, selectLanguage, selectLoading } from "../tasksSlice";
 import SearchTasks from "./SearchTasks";
-import { translations } from "../../../App/LanguageSelector/translations";
+import { translations } from "../../../translations";
 
 welcome();
 

@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectTasks, hideDoneTasks, setAllDone, selectHideDone, selectLanguage } from "../../tasksSlice";
 import { StyledButtonsArea } from "./styled";
 import { Button } from "../Buttons/styled";
-import { translations } from "../../../../App/LanguageSelector/translations";
+import { translations } from "../../../../translations";
 
 const ButtonsArea = () => {
 
