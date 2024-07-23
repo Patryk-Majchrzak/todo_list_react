@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { theme } from './theme';
 import { GlobalStyle } from './GlobalStyle';
 import store from './store';
+import "./i18n"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

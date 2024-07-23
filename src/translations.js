@@ -1,4 +1,8 @@
 export const translations = {
+    pageTitle: {
+        pl: "Lista zadań w React.js",
+        en: "Tasks list in React.js"
+    },
     Navigation: {
         pl: {
             section_1: "Zadania",

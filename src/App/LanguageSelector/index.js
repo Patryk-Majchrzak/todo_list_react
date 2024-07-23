@@ -4,6 +4,7 @@ import flagPL from "./flagPL.webp"
 import flagUK from "./flagUK.svg"
 import { setLanguage } from '../../features/tasks/tasksSlice';
 import { useDispatch } from 'react-redux';
+import { changeLanguage } from 'i18next';
 
 const LanguageSelector = () => {
   const [activeLanguageOptionId, setActiveLanguageOptionId] = useState(1);
@@ -20,6 +21,7 @@ const LanguageSelector = () => {
   const handleOptionClick = (optionId, language) => {
     setActiveLanguageOptionId(optionId);
     dispatch(setLanguage(language));
+    changeLanguage(language)
   };
 
   return (

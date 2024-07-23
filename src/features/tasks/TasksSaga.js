@@ -2,6 +2,7 @@ import { call, put, takeLatest, select, takeEvery, delay } from "redux-saga/effe
 import { fetchExampleTasks, selectTasks, fetchExampleTasksError, fetchExampleTasksSuccess, setLanguage, selectLanguage } from "./tasksSlice";
 import { saveTasksInLocalStorage } from "./localStorage";
 import { getExampleTasks } from "./getExampleTasks";
+import { translations } from "../../translations";
 
 
 function* fetchExampleTasksHandler() {
@@ -21,11 +22,13 @@ function* handleLocalStorage() {
 
 function* changeLanguageSaga() {
   const language = yield select(selectLanguage)
-  document.documentElement.lang = language;
+  const title = yield translations["pageTitle"][language]
+  document.documentElement.lang = language
+  document.title = title
 }
 
 export function* watchLanguageChange() {
-  yield takeEvery(setLanguage.type, changeLanguageSaga);
+  yield takeLatest(setLanguage.type, changeLanguageSaga);
 }
 
 export function* watchTasksActions() {
