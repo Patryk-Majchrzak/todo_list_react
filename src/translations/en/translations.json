@@ -1,0 +1,51 @@
+{
+    "pageTitle": "Tasks list in React.js",
+    "Navigation": {
+        "section_1": "Tasks",
+        "section_2": "About author",
+        "language": "Choose language"
+    },
+    "Author": {
+        "title": "About the author",
+        "greeting": "Hello! 🖐️",
+        "name": "My name is",
+        "age": "and I'm 29 years old.",
+        "workPlace": "I worked for about 6 years at ",
+        "Infosys": "Infosys",
+        "workPosition": "as an accountant for foreign clients (mainly for English, Irish, and Canadian branches).",
+        "future": "I decided to try my hand as a front-end developer, and maybe full-stack in the future"
+    },
+    "exampleTasks": {
+        "task_1": "do something",
+        "task_2": "do something else"
+    },
+    "SingleTaskView":
+    {
+        "done": "Done:",
+        "confirmation": "yes",
+        "negation": "no",
+        "error": "I couldn't find your task😢"
+    },
+    "Form": {
+        "placeholder": "What needs to be done?",
+        "addTaskButton": "Add task"
+    },
+    "SearchTasks": {
+        "placeholder": "Search for tasks"
+    },
+    "tasksView": {
+        "header": "Tasks list",
+        "formTitle": "Add new task",
+        "downloadExampleTasks": "Download example tasks",
+        "loadingExampleTasks": "Loading tasks",
+        "searchTitle": "Search engine",
+        "exampleTasksErrorHeader": "Issue with downloading tasks",
+        "exampleTasksErrorBody": "I couldn't download example tasks 😢 Please try again later"
+    },
+    "ButtonsArea": {
+        "show": "show",
+        "hide": "hide",
+        "done": "done",
+        "markAllTasksDone": "finish all tasks"
+    }
+}

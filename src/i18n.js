@@ -1,15 +1,22 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import Backend from 'i18next-http-backend';
+import translation_pl from "./translations/pl/translations.json"
+import translation_en from "./translations/en/translations.json"
 
 i18n
-  .use(Backend)
   .use(initReactI18next)
   .init({
     fallbackLng: 'pl',
     lng: 'pl',
     debug: true,
-    ns: ['exampleTasks'],
+    resources: {
+      pl: {
+        translation: translation_pl
+      },
+      en: {
+        translation: translation_en
+      }
+    },
     interpolation: {
       escapeValue: false,
     },

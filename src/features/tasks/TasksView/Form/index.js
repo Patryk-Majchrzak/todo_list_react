@@ -1,19 +1,18 @@
 import { useState, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
 import { nanoid } from "@reduxjs/toolkit";
 import { FormContainer } from "./styled";
-import { addTasks, selectLanguage } from "../../tasksSlice";
+import { addTasks } from "../../tasksSlice";
 import { FormButton } from "../Buttons/styled";
 import { Input } from "../Input/styled";
-import { translations } from "../../../../translations";
 
 const Form = () => {
     const [newTaskContent, setNewTaskContent] = useState("");
     const inputRef = useRef(null);
     const dispatch = useDispatch();
 
-    const language = useSelector(selectLanguage);
-    const t = translations["Form"][language];
+    const [t] = useTranslation("translation");
     
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -39,12 +38,12 @@ const Form = () => {
     return (
         <FormContainer onSubmit={onFormSubmit}>
             <Input
-                placeholder={t.placeholder}
+                placeholder={t("Form.placeholder")}
                 value={newTaskContent}
                 onChange={({ target }) => setNewTaskContent(target.value)}
                 ref={inputRef}
             />
-            <FormButton>{t.addTaskButton}</FormButton>
+            <FormButton>{t("Form.addTaskButton")}</FormButton>
         </FormContainer>
     );
 };

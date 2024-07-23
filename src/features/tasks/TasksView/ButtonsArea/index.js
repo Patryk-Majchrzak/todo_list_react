@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { selectTasks, hideDoneTasks, setAllDone, selectHideDone, selectLanguage } from "../../tasksSlice";
+import { useTranslation } from "react-i18next";
+import { selectTasks, hideDoneTasks, setAllDone, selectHideDone } from "../../tasksSlice";
 import { StyledButtonsArea } from "./styled";
 import { Button } from "../Buttons/styled";
-import { translations } from "../../../../translations";
 
 const ButtonsArea = () => {
 
@@ -10,8 +10,7 @@ const ButtonsArea = () => {
     const hideDone = useSelector(selectHideDone)
     const dispatch = useDispatch();
 
-    const language = useSelector(selectLanguage);
-    const t = translations["ButtonsArea"][language];
+    const [t] = useTranslation("translation");
 
     if (!tasks.length) {
         return null;
@@ -20,13 +19,13 @@ const ButtonsArea = () => {
     return (
         <StyledButtonsArea>
             <Button onClick={() => dispatch(hideDoneTasks())}>
-                {hideDone ? t.show : t.hide} {t.done}
+                {hideDone ? t("ButtonsArea.show") : t("ButtonsArea.hide")} {t("ButtonsArea.done")}
             </Button>
             <Button
                 disabled={tasks.every(({ done }) => done)}
                 onClick={() => dispatch(setAllDone())}
             >
-                {t.markAllTasksDone}
+                {t("ButtonsArea.markAllTasksDone")}
             </Button>
         </StyledButtonsArea>
     );

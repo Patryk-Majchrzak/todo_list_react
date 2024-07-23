@@ -1,6 +1,4 @@
-import { useSelector } from "react-redux";
-import { translations } from "../../../translations";
-import { selectLanguage } from "../../tasks/tasksSlice";
+import { useTranslation } from "react-i18next";
 import Section from "../../../common/Section";
 import SectionHeader from "../../../common/Section/SectionHeader";
 import SectionBody from "../../../common/Section/SectionBody";
@@ -10,15 +8,14 @@ import photo_main from "./photo_main.jpg";
 
 const AuthorView = () => {
 
-    const language = useSelector(selectLanguage);
-    const t = translations["Author"][language];
+    const [t] = useTranslation("translation");
 
     return (
         <Main>
             <Section
                 sectionHeader=
                 {<SectionHeader
-                    title={t.title}
+                    title={t("Author.title")}
                     additionalAttribute="centered"
                 />}
                 sectionBody=
@@ -29,17 +26,17 @@ const AuthorView = () => {
                                 <Photo src={photo_main} />
                             </Paragraph>
                             <Paragraph $centered>
-                                {t.greeting}
+                                {t("Author.greeting")}
                             </Paragraph>
                             <Paragraph>
-                                {t.name} {" "} <strong>Patryk Majchrzak</strong> {" "} 
-                                {t.age} 
-                                {t.workPlace}
-                                <em>{t.Infosys}</em> {" "} 
-                                {t.workPosition}
+                                {t("Author.name")} {" "} <strong>Patryk Majchrzak</strong> {" "} 
+                                {t("Author.age")} 
+                                {t("Author.workPlace")}
+                                <em>{t("Author.Infosys")}</em> {" "} 
+                                {t("Author.workPosition")}
                             </Paragraph>
                             <Paragraph>
-                                {t.future}
+                                {t("Author.future")}
                             </Paragraph>
                         </>
                     }

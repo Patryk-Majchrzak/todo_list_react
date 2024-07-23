@@ -1,0 +1,50 @@
+{
+    "pageTitle":  "Lista zadań w React.js",
+    "Navigation": {
+        "section_1": "Zadania",
+        "section_2": "O autorze",
+        "language": "Wybierz język"
+    },
+    "Author": {
+        "title": "O autorze",
+        "greeting": "Cześć! 🖐️",
+        "name": "Nazywam się",
+        "age": "i mam 29 lat.",
+        "workPlace": "Przez około 6 lat pracowałem w ",
+        "Infosys": "Infosysie",
+        "workPosition": "jako księgowy dla zagranicznych klientów (głównie dla filii angielskich, irlandzkich oraz kanadyjskich).",
+        "future": "Postanowiłem spróbować swoich sił jako front-end developer, a w przyszłości być może full-stack"
+    },
+    "exampleTasks": {
+        "task_1": "zrobić coś",
+        "task_2": "zrobić coś inneego"
+    },
+    "SingleTaskView": {
+        "done": "Ukończono:",
+        "confirmation": "tak",
+        "negation": "nie",
+        "error": "Nie znaleziono zadania 😢"
+    },
+    "Form": {
+        "placeholder": "Co jest do zrobienia",
+        "addTaskButton": "Dodaj zadanie"
+    },
+    "SearchTasks": {
+        "placeholder": "Szukaj zadania"
+    },
+    "tasksView": {
+        "header": "Lista zadań",
+        "formTitle": "Dodaj nowe zadanie",
+        "downloadExampleTasks": "Pobierz przykładowe zadania",
+        "loadingExampleTasks": "Ładuję zadania",
+        "searchTitle": "Wyszukiwarka zadań",
+        "exampleTasksErrorHeader": "Błąd przy pobieraniu zadań",
+        "exampleTasksErrorBody": "Nie udało się pobrać zadań 😢 Spróbuj ponownie później"
+    },
+    "ButtonsArea": {
+        "show": "Pokaż",
+        "hide": "Ukryj",
+        "done": "ukończone",
+        "markAllTasksDone": "Ukończ wszystkie"
+    }
+}

@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 import Form from "./Form";
 import TaskList from "./TaskList";
 import MainHeader from "../../../common/MainHeader";
@@ -9,9 +10,8 @@ import ButtonsArea from "./ButtonsArea";
 import { welcome } from "../../../utils/welcome"
 import { Main } from "./styled";
 import { Button } from "./Buttons/styled";
-import { fetchExampleTasks, selectError, selectLanguage, selectLoading } from "../tasksSlice";
+import { fetchExampleTasks, selectError, selectLoading } from "../tasksSlice";
 import SearchTasks from "./SearchTasks";
-import { translations } from "../../../translations";
 
 welcome();
 
@@ -21,24 +21,23 @@ function TasksView() {
     const loading = useSelector(selectLoading);
     const error = useSelector(selectError);
 
-    const language = useSelector(selectLanguage);
-    const t = translations["tasksView"][language];
+    const [t] = useTranslation("translation");
 
     if (!error) {
         return (
             <Main>
-                <MainHeader title={t.header} />
+                <MainHeader title={t("tasksView.header")} />
                 <Section
                     sectionHeader=
                     {<SectionHeader
-                        title={t.formTitle}
+                        title={t("tasksView.formTitle")}
                         additionalAttribute="grid"
                         additionalContent=
                         {<Button
                             onClick={() => dispatch(fetchExampleTasks())}
                             disabled={loading}
                         >
-                            {loading ? t.loadingExampleTasks : t.downloadExampleTasks}
+                            {loading ? t("tasksView.loadingExampleTasks") : t("tasksView.downloadExampleTasks")}
                         </Button>}
                     />}
                     sectionBody=
@@ -50,7 +49,7 @@ function TasksView() {
                 <Section
                     sectionHeader=
                     {<SectionHeader
-                        title={t.searchTitle}
+                        title={t("tasksView.searchTitle")}
                     />}
                     sectionBody=
                     {<SectionBody content=
@@ -61,7 +60,7 @@ function TasksView() {
                 <Section
                     sectionHeader=
                     {<SectionHeader
-                        title={t.header}
+                        title={t("tasksView.header")}
                         additionalAttribute="grid"
                         additionalContent=
                         {<ButtonsArea />}
@@ -80,11 +79,11 @@ function TasksView() {
                 <Section
                     sectionHeader=
                     {<SectionHeader
-                        title={t.exampleTasksErrorHeader}
+                        title={t("viewTasks.exampleTasksErrorHeader")}
                     />}
                     sectionBody=
                     {<SectionBody content=
-                        {t.exampleTasksErrorBody}
+                        {t("viewTasks.exampleTasksErrorBody")}
                     />}
                 />
             </Main>
