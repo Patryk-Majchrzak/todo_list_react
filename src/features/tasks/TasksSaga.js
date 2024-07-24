@@ -1,9 +1,9 @@
 import { call, put, takeLatest, select, takeEvery, delay } from "redux-saga/effects";
 import { fetchExampleTasks, selectTasks, fetchExampleTasksError, fetchExampleTasksSuccess } from "./tasksSlice";
+import { changeLanguage } from "i18next";
 import { saveTasksInLocalStorage } from "./localStorage";
 import { getExampleTasks } from "./getExampleTasks";
 import { setLanguage, selectTitle } from "./languageSlice";
-import i18n from "../../i18n";
 
 function* fetchExampleTasksHandler() {
     try {
@@ -26,7 +26,7 @@ function* changeLanguageSaga({payload: language}) {
   document.documentElement.lang = language;
   document.title = title;
 
-  yield call ([i18n, "changeLanguage"], language)
+  yield call (changeLanguage, language)
 }
 
 export function* watchLanguageChange() {
