@@ -6,7 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Hi! Welcome to my todo list, where you can create your list of tasks that can help you organize your work. 😊 Below som information for users how to navigate through the website and information for developers about code itself. So, what are you waiting for? Click th link in the demo and try it out 😉
 
 ## Details for users
-1. Website is available only in polish (I am about to add language selection in thee future, so it will be available in english as well)
+1. Website is available only in polish and in english. If you start the website for the first timee it will run in polish, however you can switch the languageby clicking one of the flags in "Wybierz język" (choose language)
+
+<img src="./for_readme/languageSelection.gif">
+
 2. After starting the website you should see navigation with two subpages. Subpage "zadania" (tasks) should be selected and there should be three sections:
 - Dodaj nowe zadanie (Add new task) with place where you can wirte task you can add and button for adding it
 - Wyszukiwarka (Search section) which allows you to filter tasks by key words you can put in the input
