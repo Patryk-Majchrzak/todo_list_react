@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useTranslation } from "react-i18next";
 import { getTaskByQuery, toggleTaskDone, removeTask, selectHideDone } from "../../tasksSlice";
 import { ListItem, TaskContent, List, StyledLink } from "./styled";
 import { TaskButton } from "../Buttons/styled";
