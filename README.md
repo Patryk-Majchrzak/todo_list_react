@@ -87,6 +87,8 @@ Custom hooks:
 8. App is using react-router to create subpages and dynamically switch between them using HashRouter
 9. All side-effects are dealt with Redux-saga
 10. User-friendly loading and error messages have been added
+11. Libraries i18next and react-i18next used for language selector
+
 ## Available Scripts
 
 In the project directory, you can run:
