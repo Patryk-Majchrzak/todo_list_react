@@ -3,7 +3,7 @@ import { fetchExampleTasks, selectTasks, fetchExampleTasksError, fetchExampleTas
 import { changeLanguage } from "i18next";
 import { saveTasksInLocalStorage } from "./localStorage";
 import { getExampleTasks } from "./getExampleTasks";
-import { setLanguage, selectTitle } from "./languageSlice";
+import { setLanguage, selectTitle, setTitle } from "./languageSlice";
 
 function* fetchExampleTasksHandler() {
     try {
@@ -21,12 +21,13 @@ function* handleLocalStorage() {
 }
 
 function* changeLanguageSaga({payload: language}) {
+  yield put(setTitle(language))
   const title = yield select(selectTitle);
   
   document.documentElement.lang = language;
   document.title = title;
 
-  yield call (changeLanguage, language)
+  yield call (changeLanguage, language);
 }
 
 export function* watchLanguageChange() {
